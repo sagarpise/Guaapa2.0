@@ -12,6 +12,9 @@
                         <kanban>
                             <templates>
                                 <t t-name="kanban-box">
+                                    <div class="o_squared_image">
+                                        <img class="card-img-top" t-att-src="kanban_image('product.template', 'image_1920', record.id.raw_value)" t-att-alt="record.name.value"/>
+                                    </div>
                                     <div class="oe_kanban_details oe_kanban_global_click">
                                         <field name="tab_name"/>
                                     </div>
