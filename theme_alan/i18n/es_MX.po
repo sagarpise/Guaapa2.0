@@ -23,7 +23,7 @@ msgid ""
 "\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n"
 "                                                tempor incididunt ut labore et dolore magna aliqua.Duis aute irure dolor in reprehenderit in voluptate velit esse\n"
 "                                                cillum dolore eu fugiat nulla pariatur.\""
-msgstr ""
+msgstr "cambiar este texto por el que debe ir. es un texto de ejemplo de lo que puedes hacer."
 
 #. module: theme_alan
 #. openerp-web
@@ -37,7 +37,7 @@ msgstr ""
 msgid ""
 "\"dolorem magnadw aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip\n"
 "                                                                    ex ea commodog consequat. Duis “"
-msgstr ""
+msgstr "cambiar este texto por el que debe ir. es un texto de ejemplo de lo que puedes hacer."
 
 #. module: theme_alan
 #. openerp-web
@@ -47,7 +47,7 @@ msgstr ""
 msgid ""
 "\"dolorem magnadw aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip\n"
 "                                                            ex ea commodog consequat. Duis “"
-msgstr ""
+msgstr "cambiar este texto por el que debe ir. es un texto de ejemplo de lo que puedes hacer."
 
 #. module: theme_alan
 #. openerp-web
@@ -61,19 +61,19 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/homepage.xml:0
 #, python-format
 msgid "#top Collections"
-msgstr ""
+msgstr "#top Colecciones"
 
 #. module: theme_alan
 #: model_terms:theme.ir.ui.view,arch:theme_alan.alan_product_banner_slider_layout
 #: model_terms:theme.ir.ui.view,arch:theme_alan.alan_product_offer_layout
 msgid "%s review"
-msgstr ""
+msgstr "%s vistas"
 
 #. module: theme_alan
 #: model_terms:theme.ir.ui.view,arch:theme_alan.alan_product_banner_slider_layout
 #: model_terms:theme.ir.ui.view,arch:theme_alan.alan_product_offer_layout
 msgid "%s reviews"
-msgstr ""
+msgstr "%s revisiones"
 
 #. module: theme_alan
 #. openerp-web
@@ -88,21 +88,21 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/call_to_action.xml:0
 #, python-format
 msgid "(800) 123 4567"
-msgstr ""
+msgstr "(800) 123 4567"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/contact_us.xml:0
 #, python-format
 msgid "+01 000 0000 000(USA)"
-msgstr ""
+msgstr "+01 000 0000 000 (USA)"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/contact_us.xml:0
 #, python-format
 msgid "+01 0000 0000 000,"
-msgstr ""
+msgstr "+01 0000 0000 000"
 
 #. module: theme_alan
 #. openerp-web
@@ -169,7 +169,7 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/about.xml:0
 #, python-format
 msgid "- Alan Theme"
-msgstr ""
+msgstr "Tema Alan"
 
 #. module: theme_alan
 #. openerp-web
@@ -177,7 +177,7 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "- HUGE DISCOUNT"
-msgstr ""
+msgstr "DESCUENTO ENORME"
 
 #. module: theme_alan
 #. openerp-web
@@ -189,7 +189,7 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/testimonial.xml:0
 #, python-format
 msgid "- Jennifer Lutheran"
-msgstr ""
+msgstr "Jennifer Lutheran"
 
 #. module: theme_alan
 #. openerp-web
@@ -199,7 +199,7 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/testimonial.xml:0
 #, python-format
 msgid "- Suhan Tereca"
-msgstr ""
+msgstr "Suhan Tereca"
 
 #. module: theme_alan
 #. openerp-web
@@ -227,7 +227,7 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/features.xml:0
 #, python-format
 msgid "1. DISCUSS"
-msgstr ""
+msgstr "1. COMENTAR"
 
 #. module: theme_alan
 #. openerp-web
@@ -236,7 +236,7 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/services.xml:0
 #, python-format
 msgid "100 SECURE PAYMENT"
-msgstr ""
+msgstr "PAGO SEGURO 100%"
 
 #. module: theme_alan
 #. openerp-web
@@ -245,21 +245,21 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/shop_banner.xml:0
 #, python-format
 msgid "100% ORGANIC"
-msgstr ""
+msgstr "Orgánico 100%"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/features.xml:0
 #, python-format
 msgid "100% Security Payment."
-msgstr ""
+msgstr "Pago seguro 100%"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/features.xml:0
 #, python-format
 msgid "15 days money back guarante"
-msgstr ""
+msgstr "15 días de garantía de devolución del dinero"
 
 #. module: theme_alan
 #. openerp-web
@@ -268,21 +268,21 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/services.xml:0
 #, python-format
 msgid "15 mins Head Oil Massage"
-msgstr ""
+msgstr "15 minutos de masaje con aceite de cabeza"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/category.xml:0
 #, python-format
 msgid "159+ Products"
-msgstr ""
+msgstr "159 productos mas "
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/category.xml:0
 #, python-format
 msgid "1659+ Products"
-msgstr ""
+msgstr "1659 productos mas "
 
 #. module: theme_alan
 #. openerp-web
@@ -310,14 +310,14 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/features.xml:0
 #, python-format
 msgid "2. DESIGN"
-msgstr ""
+msgstr "2. Diseño"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/collection.xml:0
 #, python-format
 msgid "20% OFF"
-msgstr ""
+msgstr "20% DE DESCUENTO"
 
 #. module: theme_alan
 #. openerp-web
@@ -327,7 +327,7 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "2021 New Collections"
-msgstr ""
+msgstr "Nueva Colección 2021"
 
 #. module: theme_alan
 #. openerp-web
@@ -339,35 +339,35 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/features.xml:0
 #, python-format
 msgid "24 X 7 Service"
-msgstr ""
+msgstr "Servicios las 24 x 7 "
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/contact_us.xml:0
 #, python-format
 msgid "24 x 7"
-msgstr ""
+msgstr "24 x 7"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/features.xml:0
 #, python-format
 msgid "24/7 Online Support"
-msgstr ""
+msgstr "Soporte Online por 24 horas los 7 dias de la semana "
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/services.xml:0
 #, python-format
 msgid "24/7 SERVICES"
-msgstr ""
+msgstr "Servicios las 24hrs"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/features.xml:0
 #, python-format
 msgid "24/7 Support"
-msgstr ""
+msgstr "24/7 Soporte al Cliente "
 
 #. module: theme_alan
 #. openerp-web
@@ -385,7 +385,7 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/price_table.xml:0
 #, python-format
 msgid "24hr support"
-msgstr ""
+msgstr "24hrs Soporte al Cliente "
 
 #. module: theme_alan
 #: model_terms:theme.ir.ui.view,arch:theme_alan.alan_footer_1
@@ -418,49 +418,49 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/about.xml:0
 #, python-format
 msgid "26 YEARS OF EXPERIENCE"
-msgstr ""
+msgstr "26 Años de Experiencias"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/about.xml:0
 #, python-format
 msgid "27 X 7 Service"
-msgstr ""
+msgstr "Servicios las 24 x 7 "
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/features.xml:0
 #, python-format
 msgid "3. DEVELOPMENT"
-msgstr ""
+msgstr "3. Desarrollo "
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/features.xml:0
 #, python-format
 msgid "30 DAYS MONEY BACK"
-msgstr ""
+msgstr "30 días de devolución del dinero "
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/features.xml:0
 #, python-format
 msgid "30 Days money gurantee"
-msgstr ""
+msgstr "Garantía de dinero de 30 días"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/our_client.xml:0
 #, python-format
 msgid "30.000 Users Worldwide."
-msgstr ""
+msgstr "30.000 usuarios en todo el mundo."
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/contact_us.xml:0
 #, python-format
 msgid "301 The Greenhouse, Custard,"
-msgstr ""
+msgstr "301 El invernadero, natillas,"
 
 #. module: theme_alan
 #. openerp-web
@@ -474,7 +474,7 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/features.xml:0
 #, python-format
 msgid "4. LIVE"
-msgstr ""
+msgstr "4. En Vivo "
 
 #. module: theme_alan
 #. openerp-web
@@ -485,21 +485,21 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "40% OFF"
-msgstr ""
+msgstr "40% de Descuentos"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/shop_banner.xml:0
 #, python-format
 msgid "50% Discount"
-msgstr ""
+msgstr "50% de Descuentos"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/category.xml:0
 #, python-format
 msgid "50% OFF"
-msgstr ""
+msgstr "50% DE DESCUENTOS"
 
 #. module: theme_alan
 #. openerp-web
@@ -515,21 +515,21 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "50% Off"
-msgstr ""
+msgstr "50% DE DESCUENTOS"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/category.xml:0
 #, python-format
 msgid "50% Sale"
-msgstr ""
+msgstr "50% Venta"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/category.xml:0
 #, python-format
 msgid "500+ Products"
-msgstr ""
+msgstr "500 productos mas"
 
 #. module: theme_alan
 #. openerp-web
