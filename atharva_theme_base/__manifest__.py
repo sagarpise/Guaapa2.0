@@ -22,6 +22,7 @@
         'views/admin/product_tags.xml',
         'views/admin/product_brand.xml',
         'views/admin/product_tab.xml',
+        'views/admin/product_template.xml',
         'views/admin/menu_tag.xml',
         'views/admin/pwa.xml',
         'views/megamenus/templates.xml',
