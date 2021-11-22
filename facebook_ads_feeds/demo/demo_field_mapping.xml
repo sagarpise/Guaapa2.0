@@ -85,7 +85,7 @@
           <record id="field_mapping_line_13" model="fb.field.mappning.line">
               <field name="facebook_field_id" ref="facebook_fields_13"/>
               <field name="fixed">False</field>
-              <field model="ir.model.fields" name="model_field_id" search="[('model', '=', 'product.template'),('name','=','lst_price')]"/>
+              <field model="ir.model.fields" name="model_field_id" search="[('model', '=', 'product.template'),('name','=','list_price')]"/>
               <field name="field_mapping_id" ref="field_mapping_1"/>
               <field name="fixed_text">none</field>
 
