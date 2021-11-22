@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+<data>
+        <record id="delivery_cron_guaapa" model="ir.cron">
+            <field name="name">Delivery Guaapa Cron</field>
+            <field name="model_id" ref="stock.model_stock_picking"/>
+            <field name="state">code</field>
+            <field name="code">model.consultar_tracking()</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name='interval_number'>5</field>
+            <field name='interval_type'>minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+        </record>
+</data>
+</odoo>

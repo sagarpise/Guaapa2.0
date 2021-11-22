@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <odoo>
+      <data>
+        <record id="view_stock_picking_modificated" model="ir.ui.view">
+          <field name="name">view.stock.picking.modificated</field>
+                <field name="model">stock.picking</field>
+                <field name="inherit_id" ref="stock.view_picking_form"/>
+                <field name="arch" type="xml">
+                    <xpath expr="//field[@name='location_id']" position="after">
+                            <field name="guia" attrs="{'invisible':[('picking_type_code','!=','outgoing')]}"/>
+                    </xpath>
+                </field>
+        </record>   
+
+        <record id="add_button_stock_picking_form" model="ir.ui.view">
+                <field name="name">add.button.stock.picking.form</field>
+                <field name="model">stock.picking</field>
+                <field name="inherit_id" ref="stock.view_picking_form"/>
+                <field name="arch" type="xml">
+                    <xpath expr="//form//sheet" position="before">
+                        <header>
+                            <button string="Enviar por paquetería" name="send_packages" type="object" class="oe_highlight"  attrs="{'invisible':['|',('picking_type_code','!=','outgoing'),('transferido','=',True)]}"/>
+                        </header>
+                    </xpath>
+                </field>
+        </record>
+      </data>
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <odoo>
+      <data>
+          <record id="view_stock_picking_modificated" model="ir.ui.view">
+              <field name="model">stock.picking</field>
+              <field name="inherit_id" ref="stock.view_picking_form"/>
+              <field name="arch" type="xml">
+                  <xpath expr="//field[@name='origin']" position="after">
+                        <group col="2">
+                              <field name="flag_validation"/>
+                              <field name="transferido"/>
+                        </group>
+                  </xpath>
+              </field>
+          </record>
+
+          <record model="ir.ui.view" id="reg_stock_form">
+            <field name="name">reg.stock.form</field>
+            <field name="model">reg.stock</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+              <form>
+                <group colspan="4">
+                  <field name="user_id"/>
+                  <field name="date"/>
+                  <field name="id_albaran"/>
+                </group>
+              </form>
+            </field>
+          </record>
+
+          <record model="ir.ui.view" id="reg_stock_tree">
+            <field name="name">reg.stock.tree</field>
+            <field name="model">reg.stock</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+              <group colspan="4">
+                  <field name="user_id"/>
+                  <field name="date"/>
+                  <field name="id_albaran"/>
+              </group>
+            </field>
+          </record>
+
+          <record model="ir.actions.act_window" id="act_reg_stock">
+            <field name="name">Log de peticiones por delivery</field>
+            <field name="res_model">reg.stock</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="reg_stock_tree"/>
+          </record>
+
+          <menuitem id="id_principal" name="Log de peticiones por delivery"/>
+          <menuitem  id="id_menu" parent="id_principal" name="Log peticiones" action="act_reg_stock" sequence="10"/>
+  </data>
+</odoo>

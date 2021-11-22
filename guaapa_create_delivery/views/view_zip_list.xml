@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <odoo>
+      <data>        
+        <record model="ir.ui.view" id="zip_list_form">
+            <field name="name">zip.list.form</field>
+            <field name="model">zip.list</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+              <form>
+                <group colspan="4">
+                  <field name="delivery_id"/>
+                  <field name="zip_code"/>
+                </group>
+              </form>
+            </field>
+          </record>
+
+          <record model="ir.ui.view" id="zip_list_tree">
+            <field name="name">zip.list.tree</field>
+            <field name="model">zip.list</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+              <group colspan="4">
+                  <field name="delivery_id"/>
+                  <field name="zip_code"/>
+              </group>
+            </field>
+          </record>
+
+          <record model="ir.actions.act_window" id="act_zip_list">
+            <field name="name">Lista de envíos permitidos</field>
+            <field name="res_model">zip.list</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="zip_list_tree"/>
+          </record>
+
+          <menuitem id="id_principal" name="Lista CP"/>
+          <menuitem  id="id_menu" parent="id_principal" name="Envíos permitidos" action="act_zip_list" sequence="100"/>
+    </data>
+</odoo>
