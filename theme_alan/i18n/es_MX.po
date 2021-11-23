@@ -8906,35 +8906,35 @@ msgstr "Guia de tallas"
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/services.xml:0
 #, python-format
 msgid "Skin & Beauty Care"
-msgstr ""
+msgstr "Cuidado de la piel y la belleza"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/category.xml:0
 #, python-format
 msgid "Skirts"
-msgstr ""
+msgstr "Faldas"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/testimonial.xml:0
 #, python-format
 msgid "Slide 1"
-msgstr ""
+msgstr "Diapositiva 1"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/testimonial.xml:0
 #, python-format
 msgid "Slide 2"
-msgstr ""
+msgstr "Diapositiva 2"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/testimonial.xml:0
 #, python-format
 msgid "Slide 3"
-msgstr ""
+msgstr "Diapositiva 3"
 
 #. module: theme_alan
 #. openerp-web
@@ -8942,383 +8942,383 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/product_banner_dialog.xml:0
 #, python-format
 msgid "Slider"
-msgstr ""
+msgstr "Deslizadores"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/base_templates.xml:0
 #, python-format
 msgid "Slider / Column"
-msgstr ""
+msgstr "Diapositiva / columna"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 1"
-msgstr ""
+msgstr "Deslizador 1"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 10"
-msgstr ""
+msgstr "Deslizador 10"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 11"
-msgstr ""
+msgstr "Deslizador 11"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 12"
-msgstr ""
+msgstr "Deslizador 12"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 13"
-msgstr ""
+msgstr "Deslizador 13"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 14"
-msgstr ""
+msgstr "Deslizador 14"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 15"
-msgstr ""
+msgstr "Deslizador 15"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 16"
-msgstr ""
+msgstr "Deslizador 16"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 17"
-msgstr ""
+msgstr "Deslizador 17"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 18"
-msgstr ""
+msgstr "Deslizador 18"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 19"
-msgstr ""
+msgstr "Deslizador 19"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 2"
-msgstr ""
+msgstr "Deslizador 2"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 20"
-msgstr ""
+msgstr "Deslizador 20"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 21"
-msgstr ""
+msgstr "Deslizador 21"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 22"
-msgstr ""
+msgstr "Deslizador 22"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 23"
-msgstr ""
+msgstr "Deslizador 23"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 24"
-msgstr ""
+msgstr "Deslizador 24"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 25"
-msgstr ""
+msgstr "Deslizador 25"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 26"
-msgstr ""
+msgstr "Deslizador 26"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 27"
-msgstr ""
+msgstr "Deslizador 27"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 28"
-msgstr ""
+msgstr "Deslizador 28"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 29"
-msgstr ""
+msgstr "Deslizador 29"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 3"
-msgstr ""
+msgstr "Deslizador 3"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 30"
-msgstr ""
+msgstr "Deslizador 30"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 31"
-msgstr ""
+msgstr "Deslizador 31"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 32"
-msgstr ""
+msgstr "Deslizador 32"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 33"
-msgstr ""
+msgstr "Deslizador 33"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 34"
-msgstr ""
+msgstr "Deslizador 34"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 35"
-msgstr ""
+msgstr "Deslizador 35"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 36"
-msgstr ""
+msgstr "Deslizador 36"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 37"
-msgstr ""
+msgstr "Deslizador 37"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 38"
-msgstr ""
+msgstr "Deslizador 38"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 39"
-msgstr ""
+msgstr "Deslizador 39"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 4"
-msgstr ""
+msgstr "Deslizador 4"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 40"
-msgstr ""
+msgstr "Deslizador 40"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 41"
-msgstr ""
+msgstr "Deslizador 41"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 5"
-msgstr ""
+msgstr "Deslizador 5"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 6"
-msgstr ""
+msgstr "Deslizador 6"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 7"
-msgstr ""
+msgstr "Deslizador 7"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 8"
-msgstr ""
+msgstr "Deslizador 8"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Slider 9"
-msgstr ""
+msgstr "Deslizador 9"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/base_templates.xml:0
 #, python-format
 msgid "Slider Options"
-msgstr ""
+msgstr "Opciones de los deslizadores"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/base_templates.xml:0
 #, python-format
 msgid "Slider Time (Seconds)"
-msgstr ""
+msgstr "tiempo de deslizador (segundos)"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/base_templates.xml:0
 #, python-format
 msgid "Slider pagination"
-msgstr ""
+msgstr "Paginación de deslizadores"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Smartphones"
-msgstr ""
+msgstr "telefonos moviles inteligentes"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/services.xml:0
 #, python-format
 msgid "Snowboards"
-msgstr ""
+msgstr "Tablas de snowboards"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/about.xml:0
 #, python-format
 msgid "Social"
-msgstr ""
+msgstr "Social"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/features.xml:0
 #, python-format
 msgid "Social Marketing"
-msgstr ""
+msgstr "Marketing social"
 
 #. module: theme_alan
 #: model_terms:theme.ir.ui.view,arch:theme_alan.alan_footer_10
 msgid "Sofa"
-msgstr ""
+msgstr "Sofá "
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/category.xml:0
 #, python-format
 msgid "Sofas"
-msgstr ""
+msgstr "Sofas"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Soft Toys"
-msgstr ""
+msgstr "jueguetes blandos"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Solid Black"
-msgstr ""
+msgstr "Negro Solido"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/category.xml:0
 #, python-format
 msgid "Some quick example text to build on the card title. Some quick example text to build on the card title."
-msgstr ""
+msgstr "Algún texto de ejemplo rápido para construir sobre el título de la tarjeta. Algún texto de ejemplo rápido para construir sobre el título de la tarjeta. "
 
 #. module: theme_alan
 #. openerp-web
