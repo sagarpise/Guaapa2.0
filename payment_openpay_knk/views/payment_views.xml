@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="openpay_acquirer_form" model="ir.ui.view">
+        <field name="name">acquirer.form.openpay</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.payment_acquirer_form" />
+        <field name="arch" type="xml">
+            <xpath expr='//group[@name="acquirer"]' position='after'>
+                <group attrs="{'invisible': [('provider', 'not in', ['openpay_card', 'openpay_store', 'openpay_bank', 'openpay_alipay'])]}">
+                    <field name="openpay_version" attrs="{'invisible': [('provider', 'not in', ['openpay_card', 'openpay_store'])]}" />
+                    <field name="openpay_mxn_merchant_id" string="Merchant ID" attrs="{'invisible': [('openpay_version', '=', 'cop')]}" />
+                    <field name="openpay_mxn_secret_key" password="True" string="Secret Key" attrs="{'invisible': [('openpay_version', '=', 'cop')]}" />
+                    <field name="openpay_mxn_public_key" string="Public Key" attrs="{'invisible': [('openpay_version', '=', 'cop')]}" />
+                    <field name="openpay_cop_merchant_id" string="Merchant ID" attrs="{'invisible': [('openpay_version', '=', 'mxn')]}" />
+                    <field name="openpay_cop_secret_key" password="True" string="Secret Key" attrs="{'invisible': [('openpay_version', '=', 'mxn')]}" />
+                    <field name="openpay_cop_public_key" string="Public Key" attrs="{'invisible': [('openpay_version', '=', 'mxn')]}" />
+                    <field name="openpay_webhook_id" invisible="1" />
+                </group>
+                <div class="text-danger font-weight-bold" attrs="{'invisible': [('openpay_version', '=', 'cop')]}">
+                    <p>
+                        **<br/>
+                        Supports Mexican Pesos (MXN) &amp; United States Dollar (USD) for card payment<br/><br/>
+                    </p>
+                </div>
+                <div class="text-danger font-weight-bold" attrs="{'invisible': [('openpay_version', '=', 'mxn')]}">
+                    <p>
+                        **<br/>
+                        Supports only Colombian Peso (COP) for card payment<br/><br/>
+                    </p>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <record id="openpay_transaction_form" model="ir.ui.view">
+        <field name="name">acquirer.transaction.form.openpay</field>
+        <field name="model">payment.transaction</field>
+        <field name="inherit_id" ref="payment.payment_transaction_form" />
+        <field name="arch" type="xml">
+            <xpath expr='//sheet/group[2]' position='after'>
+                <group string="Openpay Transaction Details" attrs="{'invisible': [('provider', 'not in', ['openpay_card', 'openpay_store', 'openpay_bank', 'openpay_alipay'])]}">
+                    <field name="openpay_authorization_code" />
+
+                    <field name="openpay_card_type" attrs="{'invisible': [('provider', '!=', 'openpay_card')]}" />
+                    <field name="openpay_card_detail" attrs="{'invisible': [('provider', '!=', 'openpay_card')]}" />
+
+                    <field name="openpay_store_reference" attrs="{'invisible': [('provider', '!=', 'openpay_store')]}" />
+                    <field name="openpay_store_receipt_filename" invisible="1" />
+                    <field name="openpay_store_receipt" filename="openpay_store_receipt_filename" attrs="{'invisible': [('provider', '!=', 'openpay_store')]}" />
+
+                    <field name="openpay_bank" attrs="{'invisible': [('provider', '!=', 'openpay_bank')]}" />
+                    <field name="openpay_bank_name" attrs="{'invisible': [('provider', '!=', 'openpay_bank')]}" />
+                    <field name="openpay_bank_agreement" attrs="{'invisible': [('provider', '!=', 'openpay_bank')]}" />
+                    <field name="openpay_bank_clabe" attrs="{'invisible': [('provider', '!=', 'openpay_bank')]}" />
+                    <field name="openpay_bank_receipt_filename" invisible="1" />
+                    <field name="openpay_bank_receipt" filename="openpay_bank_receipt_filename" attrs="{'invisible': [('provider', '!=', 'openpay_bank')]}" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

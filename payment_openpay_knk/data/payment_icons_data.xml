@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="payment_icon_cc_carnet" model="payment.icon">
+            <field name="name">Carnet</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/carnet.png"/>
+        </record>
+        <record id="payment_icon_alipay" model="payment.icon">
+            <field name="name">Alipay</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/alipay.png"/>
+        </record>
+        <record id="payment_icon_paynet" model="payment.icon">
+            <field name="name">Paynet</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/paynet.png"/>
+        </record>
+        <record id="payment_icon_7Eleven" model="payment.icon">
+            <field name="name">7 Eleven</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/7eleven.png" />
+        </record>
+        <record id="payment_icon_Asturiano" model="payment.icon">
+            <field name="name">Asturiano</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/Asturiano.png" />
+        </record>
+        <record id="payment_icon_aTiendas" model="payment.icon">
+            <field name="name">A Tiendas</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/aTiendas.jpg" />
+        </record>
+        <record id="payment_icon_benavides" model="payment.icon">
+            <field name="name">Benavides</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/benavides.jpg" />
+        </record>
+        <record id="payment_icon_Bodega_Aurrera" model="payment.icon">
+            <field name="name">Bodega Aurrera</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/Bodega-Aurrera.png" />
+        </record>
+        <record id="payment_icon_circlek" model="payment.icon">
+            <field name="name">Circle K</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/Circle K.jpg" />
+        </record>
+        <record id="payment_icon_extra" model="payment.icon">
+            <field name="name">Extra</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/extra.png" />
+        </record>
+        <record id="payment_icon_DelAhorro" model="payment.icon">
+            <field name="name">Farmacias del Ahorro</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/Farmacias del Ahorro.png" />
+        </record>
+        <record id="payment_icon_gestoPago" model="payment.icon">
+            <field name="name">GestoPago</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/gestoPago.jpg" />
+        </record>
+        <record id="payment_icon_guadalajara" model="payment.icon">
+            <field name="name">Guadalajara</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/guadalajara.jpg" />
+        </record>
+        <record id="payment_icon_Kiosko" model="payment.icon">
+            <field name="name">Kiosko</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/Kiosko.jpg" />
+        </record>
+        <record id="payment_icon_multiRecargas" model="payment.icon">
+            <field name="name">MultiRecargas</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/multiRecargas.jpg" />
+        </record>
+        <record id="payment_icon_pagoRapido" model="payment.icon">
+            <field name="name">Pago Rapido</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/pagoRapido.jpg" />
+        </record>
+        <record id="payment_icon_sams" model="payment.icon">
+            <field name="name">Sams</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/sams.png" />
+        </record>
+        <record id="payment_icon_Superama" model="payment.icon">
+            <field name="name">Superama</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/Superama.png" />
+        </record>
+        <record id="payment_icon_waldos" model="payment.icon">
+            <field name="name">Waldos</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/Waldos.png" />
+        </record>
+        <record id="payment_icon_walmart" model="payment.icon">
+            <field name="name">Walmart</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/Walmart.png" />
+        </record>
+        <record id="payment_icon_walmart_express" model="payment.icon">
+            <field name="name">Walmart_express</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/stores/walmart_express.png" />
+        </record>
+        <record id="payment_icon_abccapital" model="payment.icon">
+            <field name="name">ABC CAPITAL</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/abccapital.jpg" />
+        </record>
+        <record id="payment_icon_afirme" model="payment.icon">
+            <field name="name">AFIRME</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/afirme.png" />
+        </record>
+        <record id="payment_icon_banbajio" model="payment.icon">
+            <field name="name">BanBajio</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/banbajio.jpg" />
+        </record>
+        <record id="payment_icon_bancoAzteca" model="payment.icon">
+            <field name="name">Banco Azteca</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/bancoAzteca.png" />
+        </record>
+        <record id="payment_icon_bancoppel" model="payment.icon">
+            <field name="name">BanCoppel</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/bancoppel.jpg" />
+        </record>
+        <record id="payment_icon_banjercito" model="payment.icon">
+            <field name="name">Banjercito</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/banjercito.jpg" />
+        </record>
+        <record id="payment_icon_banorte" model="payment.icon">
+            <field name="name">BANORTE</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/banorte.png" />
+        </record>
+        <record id="payment_icon_banregio" model="payment.icon">
+            <field name="name">BANREGIO</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/banregio.png" />
+        </record>
+        <record id="payment_icon_bansi" model="payment.icon">
+            <field name="name">BANSI</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/bansi.jpg" />
+        </record>
+        <record id="payment_icon_base" model="payment.icon">
+            <field name="name">BASE</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/base.jpg" />
+        </record>
+        <record id="payment_icon_bbva" model="payment.icon">
+            <field name="name">BBVA</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/bbva.png" />
+        </record>
+        <record id="payment_icon_bx" model="payment.icon">
+            <field name="name">BX+</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/bx+.jpg" />
+        </record>
+        <record id="payment_icon_cibanco" model="payment.icon">
+            <field name="name">CIBanco</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/ci.png" />
+        </record>
+        <record id="payment_icon_citibanamex" model="payment.icon">
+            <field name="name">citibanamex</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/citibanamex.png" />
+        </record>
+        <record id="payment_icon_grupoFinancieroMifel" model="payment.icon">
+            <field name="name">Grupo Financiero Mifel</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/grupo.jpg" />
+        </record>
+        <record id="payment_icon_inbursa" model="payment.icon">
+            <field name="name">INBURSA</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/inbursa.png" />
+        </record>
+        <record id="payment_icon_invex" model="payment.icon">
+            <field name="name">INVEX</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/invex.png" />
+        </record>
+        <record id="payment_icon_jpmorgan" model="payment.icon">
+            <field name="name">J.P.Morgan</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/jpmorgan.jpg" />
+        </record>
+        <record id="payment_icon_monex" model="payment.icon">
+            <field name="name">monex</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/monex.png" />
+        </record>
+        <record id="payment_icon_mugf" model="payment.icon">
+            <field name="name">MUGF</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/mugf.jpg" />
+        </record>
+        <record id="payment_icon_multiva" model="payment.icon">
+            <field name="name">MULTIVA</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/multiva.jpg" />
+        </record>
+        <record id="payment_icon_santander" model="payment.icon">
+            <field name="name">Santander</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/santander.png" />
+        </record>
+        <record id="payment_icon_scotiabank" model="payment.icon">
+            <field name="name">Scotiabank</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/scotiabank.png" />
+        </record>
+        <record id="payment_icon_volkswagen" model="payment.icon">
+            <field name="name">Volkswagen Bank</field>
+            <field name="image" type="base64" file="payment_openpay_knk/static/src/img/banks/volkswagen.jpg" />
+        </record>
+    </data>
+</odoo>
