@@ -3,34 +3,41 @@
 <!-- See LICENSE file for full copyright and licensing details. -->
 <odoo>
 	<data>
-		<template id="assets_frontend" name="website guest aassets_frontend" inherit_id="website.assets_frontend">
-			<xpath expr="." position="inside">
-				<script type="text/javascript" src="/email_verification/static/src/js/email_verification.js"></script>
-			</xpath>
-		</template>
-
 		<template id="email_verification_inherited_checkout" inherit_id="website_sale.checkout">
 			<xpath expr="//div[hasclass('d-flex', 'justify-content-between', 'mt-3')]//a[hasclass('btn', 'btn-primary', 'mb32')]" position="replace">
 				<a id="restrict_checkout" t-att-disabled="env.uid!= env.ref('base.public_user').id and website.check_email_is_validated() in ['unverified','expired']" class="btn btn-default btn-primary pull-right mb32" href="/shop/confirm_order">Confirm
 					<span class="fa fa-long-arrow-right"/></a>
 			</xpath>
 		</template>
-		
-		<template id="short_cart_summary" inherit_id="layouts.layout_pago_now" name="Email Verification Cart summary Inherit">
-			<xpath expr="//a[hasclass('btn-primary')]" position="attributes">
+		<template id="cart" inherit_id="website_sale.cart" name="Email Verification Cart Inherit">
+			<xpath expr="//div[hasclass('row')]//a[@href='/shop/checkout?express=1']" position="attributes">
 				<attribute name="t-att-disabled">env.uid!= env.ref('base.public_user').id and website.check_email_is_validated() in ['unverified','expired']</attribute>
+			</xpath>
+		</template>
+		<template id="short_cart_summary" inherit_id="website_sale.short_cart_summary" name="Email Verification Cart summary Inherit">
+			<xpath expr="//a[hasclass('btn-secondary')]" position="replace">
+				<a
+					role="button"
+					t-att-disabled="env.uid!= env.ref('base.public_user').id and website.check_email_is_validated() in ['unverified','expired']"
+					t-if="website_sale_order and website_sale_order.website_order_line"
+					class="btn btn-secondary float-right d-none d-xl-inline-block"
+					href="/shop/checkout?express=1">
+					<span>Process Checkout</span>
+				</a>
 			</xpath>
 		</template>
 
 		<template id="frontend_layout" inherit_id="web.frontend_layout" name="Email Verification Warning layout">
 			<xpath expr="//header" position="after">
 				<div class="alert alert-warning text-center" role="alert" t-if="website.check_email_is_validated() == 'unverified'">
-					<span>Su cuenta aún no está verificada, debe verificar su cuenta antes de continuar. Si desea reenviar el enlace</span>
-					<a style="cursor:pointer" t-attf-href="/resend/email">click aquí</a>.
+					<span>The account is not verified yet, you need to verify your account before proceeding further. If you want to re-send link
+					</span>
+					<a style="cursor:pointer" t-attf-href="/resend/email">click here</a>.
 				</div>
 				<div class="alert alert-warning text-center" role="alert" t-if="website.check_email_is_validated() == 'expired'">
-					<span>The account is not verified yet, you need to verify your account before proceeding further. The link sent to your email has been expired, for sending a new link</span>
-					<a style="cursor:pointer" t-attf-href="/resend/email">click aquí</a>.
+					<span>The account is not verified yet, you need to verify your account before proceeding further. The link sent to your email has been expired, for sending a new link
+					</span>
+					<a style="cursor:pointer" t-attf-href="/resend/email">click here</a>.
 				</div>
 			</xpath>
 		</template>
@@ -47,8 +54,7 @@
 							<img t-if="status in ['unverified','expired','error'] " style="height:60px;" src="/email_verification/static/src/img/error.png"/>
 						</center>
 						<center >
-							<h2 t-if="status in ['verified','already_verified']" style="margin-bottom:30px;">Su cuenta ha sido verificada.</h2>
-							<p style="margin-bottom:5px;"><t t-esc="msg"/></p>
+							<h2 style="margin-bottom:5px;"><t t-esc="msg"/></h2>
 							<div id="loadImgWrap" style="display:none">
 								<img style="height:45px;" src="/email_verification/static/src/img/loader.GIF"/>
 							</div>
@@ -62,32 +68,6 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 			<script src="/email_verification/static/src/js/template_view.js"></script>
 
-		</template>
-
-		<template id="welcome_template" name="Welcome page">
-			<t t-call="website.layout">
-				<div id="wrap" class="oe_structure oe_empty">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6 col-xs-6 col-sm-6 col-md-offset-3 box_welcome" style="margin-top:7%">
-								<div id="box_main">
-									<p class="h">ES NECESARIO QUE CONFIRMES TU CUENTA</p>
-									<p><t t-esc="name"/>, revisa tu correo electónico <b><t t-esc="email"/></b> y confirma tu cuenta.</p>
-								</div>
-								<div id="box_promo">
-									<p>El enlace será valido durante <b>24 horas</b></p>
-									<hr/>
-								</div>
-								<div id="box_footer">
-									<p class="question">¿No recibiste el correo?</p>
-									<p>1.Verifica tu carpeta de <b>spam.</b></p>
-									<p>2.Da click aquí para <a style="cursor:pointer" t-attf-href="/resend/email"><b>Reenviar correo</b></a> </p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</t>
 		</template>
 	</data>
 </odoo>

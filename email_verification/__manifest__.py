@@ -28,14 +28,12 @@
                              'mail',
                              'website_sale',
                              'website_webkul_addons',
-                             'layouts'
                             ],
   "data"                 :  [
                              'data/email_template.xml',
                              'views/templates_view.xml',
                              'views/res_config_view.xml',
                              'views/res_users_view.xml',
-                             'views/assets.xml',
                              'views/webkul_addons_config_inherit_view.xml',
                              'wizard/wizard_view.xml',
                              'security/ir.model.access.csv'
@@ -47,4 +45,9 @@
   "price"                :  29,
   "currency"             :  "USD",
   "pre_init_hook"        :  "pre_init_check",
+  'assets': {
+        'web.assets_tests': [
+            'email_verification/static/src/js/email_verification.js',
+        ],
+    },
 }
