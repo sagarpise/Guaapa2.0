@@ -45,4 +45,9 @@
   "price"                :  29,
   "currency"             :  "USD",
   "pre_init_hook"        :  "pre_init_check",
+  'assets': {
+        'web.assets_tests': [
+            'email_verification/static/src/js/email_verification.js',
+        ],
+    },
 }
