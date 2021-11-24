@@ -25,7 +25,7 @@
     'license': 'OPL-1',
     'depends': ['payment', 'website_sale'],
     'data': [
-        'views/assets.xml',
+        #'views/assets.xml',
         'views/payment_views.xml',
         'views/payment_templates.xml',
         'data/payment_icons_data.xml',
@@ -38,4 +38,10 @@
     'currency': 'EUR',
     'price': 129,
     'uninstall_hook': 'uninstall_hook',
+    'assets': {
+        'web.assets_frontend': [
+            'payment_openpay_knk/static/src/css/openpay.css',
+            'payment_openpay_knk/static/src/css/pago.css',
+        ],
+    },
 }
