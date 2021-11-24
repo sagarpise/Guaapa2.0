@@ -9325,89 +9325,89 @@ msgstr "Algún texto de ejemplo rápido para construir sobre el título de la ta
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/testimonial.xml:0
 #, python-format
 msgid "Someone famous in"
-msgstr ""
+msgstr "Alguien famoso en"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Something mystic, something magical"
-msgstr ""
+msgstr "Algo místico, algo mágico"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/testimonial.xml:0
 #, python-format
 msgid "Source Title"
-msgstr ""
+msgstr "Título de la fuente"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Space planning that’s both"
-msgstr ""
+msgstr "Planificación del espacio que es a la vez"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/banner.xml:0 code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Special Offer"
-msgstr ""
+msgstr "Oferta Especial"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/category.xml:0
 #, python-format
 msgid "Square"
-msgstr ""
+msgstr "Cuadrado"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/banner.xml:0
 #, python-format
 msgid "Start Shopping"
-msgstr ""
+msgstr "Empieza a comprar"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/collection.xml:0
 #, python-format
 msgid "Start With 10$"
-msgstr ""
+msgstr "Empice con 10$"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/banner.xml:0
 #, python-format
 msgid "Start with $100.00"
-msgstr ""
+msgstr "Empiece con $100.00"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/banner.xml:0
 #, python-format
 msgid "Starting from $1,200."
-msgstr ""
+msgstr "Desde $1200.00"
 
 #. module: theme_alan
 #: model_terms:theme.ir.ui.view,arch:theme_alan.s_img_hotspots_options
 msgid "Static"
-msgstr ""
+msgstr "Estático"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/call_to_action.xml:0
 #, python-format
 msgid "Stay Updated"
-msgstr ""
+msgstr "Mantengase Actualizado"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/services.xml:0
 #, python-format
 msgid "Steam Bath"
-msgstr ""
+msgstr "Baño de Vapor"
 
 #. module: theme_alan
 #. openerp-web
@@ -9421,88 +9421,88 @@ msgstr ""
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/category.xml:0
 #, python-format
 msgid "Storage"
-msgstr ""
+msgstr "Tienda"
 
 #. module: theme_alan
 #: model_terms:theme.ir.ui.view,arch:theme_alan.alan_footer_2 model_terms:theme.ir.ui.view,arch:theme_alan.alan_footer_3
 msgid "Store Location"
-msgstr ""
+msgstr "Ubicación de la Tienda"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/banner.xml:0
 #, python-format
 msgid "Strategy"
-msgstr ""
+msgstr "Estrategia"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/category.xml:0
 #, python-format
 msgid "Striped cotton"
-msgstr ""
+msgstr "Algodo Rayado"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/about.xml:0
 #, python-format
 msgid "Student support services"
-msgstr ""
+msgstr "Servicios de apoyo al estudiante"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/features.xml:0
 #, python-format
 msgid "Students Enrolled"
-msgstr ""
+msgstr "Estudiantes inscritos"
 
 #. module: theme_alan
 #: model_terms:theme.ir.ui.view,arch:theme_alan.s_img_hotspots_options
 msgid "Style"
-msgstr ""
+msgstr "Estilos"
 
 #. module: theme_alan
 #: model_terms:theme.ir.ui.view,arch:theme_alan.s_img_hotspots_options
 msgid "Style-1"
-msgstr ""
+msgstr "Estilo 1"
 
 #. module: theme_alan
 #: model_terms:theme.ir.ui.view,arch:theme_alan.s_img_hotspots_options
 msgid "Style-2"
-msgstr ""
+msgstr "Estilo 2"
 
 #. module: theme_alan
 #: model_terms:theme.ir.ui.view,arch:theme_alan.s_img_hotspots_options
 msgid "Style-3"
-msgstr ""
+msgstr "Estilo 3"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/category.xml:0
 #, python-format
 msgid "Stylish Chair"
-msgstr ""
+msgstr "Silla con estilo"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/js/base/megaDialog.js:0
 #, python-format
 msgid "Sub Category Configuration"
-msgstr ""
+msgstr "Configuracion de sub categoria"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/call_to_action.xml:0
 #, python-format
 msgid "Subscribe"
-msgstr ""
+msgstr "suscribase"
 
 #. module: theme_alan
 #. openerp-web
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "Summer Collection"
-msgstr ""
+msgstr "Coleccion de Verano"
 
 #. module: theme_alan
 #. openerp-web
