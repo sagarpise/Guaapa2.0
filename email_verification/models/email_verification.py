@@ -26,8 +26,7 @@ class ResUsers(models.Model):
         user.partner_id.signup_prepare(signup_type="verify", expiration=expiration)
         if temp_id:
             try:
-                #TODO: Cambiar el correo que se manda en caso de no tener 
-                res = temp_id.send_mail(res_id, email_values={'email_to': user.partner_id.email or '', 'email_from': 'registro@guaapa.com'}, force_send=True)
+                res = temp_id.send_mail(res_id, email_values={'email_to': user.partner_id.email or '', 'email_from': user.partner_id.company_id.email or ''}, force_send=True)
             except Exception as e:
                 _logger.info('=======Exception======== {}'.format(e))
         return True
@@ -61,30 +60,30 @@ class ResUsers(models.Model):
     @api.model
     def wk_verify_email(self, params={}):
         status = 'error'
-        msg = "¡¡UPS!!. Actualmente hay algún error. Inténtelo después de un tiempo."
+        msg = "Oops!!. There is some error currently please try after some time."
         try:
             if params.get('wk_token') and params.get('wk_uid') and params.get('db'):
                 uid = int(params.get('wk_uid'))
                 token = str(params.get('wk_token'))
                 user = request.env['res.users'].sudo().browse(uid)
-                msg = "Será redirigido automáticamente a la página de inicio."
+                msg = "Your account has been verified. You will be automatically redirected to Home page."
                 if not user.wk_token_verified:
                     if user.signup_token == token:
                         if not user.signup_valid:
                             status = 'expired'
-                            msg = "Este enlace ha caducado. Vuelva a enviar un nuevo enlace de verificación desde su cuenta."
+                            msg = "This link has been expired. Resend a new verification link from your account."
                         else:
                             user.wk_token_verified = True
                             status = 'verified'
                     else:
                         status = 'unverified'
-                        msg = "La cuenta aún no está verificada. Vuelva a enviar un nuevo enlace de verificación desde su cuenta."
+                        msg = "The account is not verified yet. Resend a new verification link from your account."
                 else:
                     status = 'already_verified'
-                    msg = "Será redirigido automáticamente a la página de inicio."
+                    msg = "Your account has already been verified. You will be automatically redirected to Home page."
         except Exception as e:
             status = 'error'
-            msg = "¡¡UPS!!. Actualmente hay algún error. Inténtelo más tarde."
+            msg = "Oops!!. There is some error currently please try after some time."
         return {'status':status,'msg':msg}
 
 

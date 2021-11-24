@@ -24,25 +24,21 @@ class Home(Home):
         res = request.env['res.users'].wk_verify_email(kw)
         return request.render('email_verification.email_verification_template',{'status':res['status'],'msg':res['msg']})
 
-    @http.route('/web/welcome', type='http', auth="user",website=True)
-    def web_welcome_page(self, redirect=None, **kw):
-        login_user = request.env['res.users'].browse(request.uid)
-        return request.render('email_verification.welcome_template',{'email':login_user.email,'name':login_user.name})
-
     @http.route('/resend/email', type='http', auth='public', website=True)
     def resend_email(self, *args, **kw):
         user = request.env['res.users']
         user_id = user.browse([request.uid])
         post_params = ''
-        href = request.httprequest.referrer
         if not user_id.wk_token_verified:
             user.sudo().send_verification_email(request.uid)
         else:
+            href = request.httprequest.referrer
             if '#' in href:
                 href = href + '&is_verified=True'
             else:
                 href = href + '#is_verified=True'
-        return request.redirect(href)
+            return request.redirect(href)
+        return
 
 
 class WebsiteSale(WebsiteSale):

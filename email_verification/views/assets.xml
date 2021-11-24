@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<odoo>    
-	<template id="custom_css_layouts" inherit_id="website.assets_frontend" name="Styles Sidebar Cart Shop">
-	    <xpath expr="//link" position="after">
-	        <link rel="stylesheet" type="text/scss" href="/email_verification/static/src/css/style.css"/>
-		</xpath>
-	</template>
-</odoo>

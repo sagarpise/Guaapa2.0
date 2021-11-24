@@ -7,7 +7,7 @@ odoo.define('email_verification.email_verification', function(require) {
         let href = location.href;
         if ( href.includes('is_verified') ) {
             location.href = href.split('is_verified=True')[0];
-            alert(_t('Ya estás verificado'));
+            alert(_t('You are already verified'));
         }
         
         var oe_website_sale = this;
@@ -15,7 +15,7 @@ odoo.define('email_verification.email_verification', function(require) {
             if (('disabled' in this.attributes) && this.attributes.disabled.value == 'True') {
                 event.preventDefault();
                 $(this).popover({
-                    content: "<div class='text-center '>Aún no ha verificado su correo electrónico, verifíquelo para continuar.</div>",
+                    content: "<div class='text-center '>You have not verified your email yet, please verify your email for proceeding further.</div>",
                     title: "<div class='text-center bg-danger'>WARNING!!</div>",
                     placement: "top",
                     html: true,
