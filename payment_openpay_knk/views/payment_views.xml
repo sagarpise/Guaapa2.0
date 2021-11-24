@@ -3,7 +3,7 @@
     <record id="openpay_acquirer_form" model="ir.ui.view">
         <field name="name">acquirer.form.openpay</field>
         <field name="model">payment.acquirer</field>
-        <field name="inherit_id" ref="payment.acquirer_form" />
+        <field name="inherit_id" ref="payment.payment_acquirer_form" />
         <field name="arch" type="xml">
             <xpath expr='//group[@name="acquirer"]' position='after'>
                 <group attrs="{'invisible': [('provider', 'not in', ['openpay_card', 'openpay_store', 'openpay_bank', 'openpay_alipay'])]}">
@@ -34,7 +34,7 @@
     <record id="openpay_transaction_form" model="ir.ui.view">
         <field name="name">acquirer.transaction.form.openpay</field>
         <field name="model">payment.transaction</field>
-        <field name="inherit_id" ref="payment.transaction_form" />
+        <field name="inherit_id" ref="payment.payment_transaction_form" />
         <field name="arch" type="xml">
             <xpath expr='//sheet/group[2]' position='after'>
                 <group string="Openpay Transaction Details" attrs="{'invisible': [('provider', 'not in', ['openpay_card', 'openpay_store', 'openpay_bank', 'openpay_alipay'])]}">
