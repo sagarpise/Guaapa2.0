@@ -8,7 +8,7 @@
         <field name="inherit_id" ref="product.product_template_form_view"/>
         <field name="arch" type="xml">
             <xpath expr="//group[@name='group_standard_price']" position="after">
-                <label string="Descripción" for="product_description"/>
+                <label string="Descripción" for="product_tab_description"/>
                  <field name="product_tab_description" placeholder="Product Description"/>
             </xpath>
         </field>
