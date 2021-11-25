@@ -11,9 +11,4 @@
     "installable": True,
     "depends": ["website_sale_suggest_create_account", "web_tour"],
     "data": ["views/website_sale.xml",],
-    'assets': {
-        'web.assets_tests': [
-            'website_sale_require_login/static/tests/tours/checkout.js',
-        ],
-    },
 }
