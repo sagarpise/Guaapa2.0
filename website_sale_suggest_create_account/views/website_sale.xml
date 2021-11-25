@@ -3,10 +3,7 @@
     <template id="cart" inherit_id="website_sale.cart" customize_show="True">
         <xpath expr="//div[@id='wrap']" position="before">
             <t t-set="user_authenticated" t-value="user_id != website.user_id" />
-            <t
-                t-set="signup_allowed"
-                t-value="user_id._get_signup_invitation_scope() == 'b2c'"
-            />
+            
             <t
                 t-set="can_checkout"
                 t-value="website_sale_order and
