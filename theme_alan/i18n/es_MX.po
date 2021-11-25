@@ -10205,7 +10205,7 @@ msgstr "Servicios V.I.P."
 #: code:addons/theme_alan/static/src/xml/snippets/alan_snippet_builder/templates/sliders.xml:0
 #, python-format
 msgid "VEHICLE"
-msgstr "Vehicúlo"
+msgstr "Vehículo"
 
 #. module: theme_alan
 #. openerp-web
