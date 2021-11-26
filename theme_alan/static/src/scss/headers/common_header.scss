@@ -206,6 +206,10 @@ $-menu-color: o-color('menu-custom') or o-color('menu');
 -------------------------------------------------------------------------------------------------*/
 @include media-breakpoint-up(lg) {
     .as-main-header {
+        #top_menu_container{
+            background: black;
+            color: #FFFFFF;
+        }
         .navbar-collapse {
             background: inherit !important;
         }
