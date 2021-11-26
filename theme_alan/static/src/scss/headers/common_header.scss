@@ -222,6 +222,10 @@ $-menu-color: o-color('menu-custom') or o-color('menu');
             color: rgba(147, 147, 147, 0.5);
 
         }
+
+        a.nav-link.nav-link.o_default_snippet_text {
+            color: black !important;
+        }
     }
 }
 @if not $-off-canvas-hamburger {
