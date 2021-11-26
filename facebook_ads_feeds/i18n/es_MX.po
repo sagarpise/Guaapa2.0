@@ -295,7 +295,7 @@ msgstr "Nombre de Categoría de Google"
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_product_product__gtin
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_product_template__gtin
 msgid "Gtin"
-msgstr ""
+msgstr "Gtin"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_attachment_mapping__id
@@ -305,14 +305,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_field_mappning_line__id
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_google_category__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,help:facebook_ads_feeds.field_fb_facebook_shop__warehouse_id
 msgid ""
 "If it's set then selected warehouse quantity will get fetched else all "
-"quantity will fetch."
+ 
 msgstr ""
+"Si está configurado, la cantidad de almacén seleccionada se recuperará, si no todo"
+"la cantidad alcanzará".
 
 #. module: facebook_ads_feeds
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.facebook_shop_form
@@ -320,11 +322,13 @@ msgid ""
 "If you will re-generate token enabled feed URL then you will have to update "
 "on Facebook too."
 msgstr ""
+"Si va a volver a generar la URL del feed con token habilitado, tendrá que actualizar"
+"en Facebook también".
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,help:facebook_ads_feeds.field_fb_facebook_shop__content_language_id
 msgid "Language in which your products will get sync on Facebook Shop"
-msgstr ""
+msgstr "Idioma en el que se sincronizarán sus productos en la tienda de Facebook"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_attachment_mapping____last_update
@@ -334,7 +338,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_field_mappning_line____last_update
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_google_category____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última Modificación el "
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_attachment_mapping__write_uid
@@ -344,7 +348,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_field_mappning_line__write_uid
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_google_category__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Última actualización por"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_attachment_mapping__write_date
@@ -354,23 +358,23 @@ msgstr ""
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_field_mappning_line__write_date
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_google_category__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Última actualizacion en"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_attachment_mapping__latest
 msgid "Latest"
-msgstr ""
+msgstr "Mas Reciente"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__limit
 msgid "Limit"
-msgstr ""
+msgstr "Límite"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields.selection,name:facebook_ads_feeds.selection__fb_facebook_shop__feeds_security__manual
 #: model:ir.model.fields.selection,name:facebook_ads_feeds.selection__fb_facebook_shop__product_selection_type__manual
 msgid "Manual"
-msgstr ""
+msgstr "Manual"
 
 #. module: facebook_ads_feeds
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.facebook_shop_form
@@ -378,62 +382,64 @@ msgid ""
 "Manual: Feed URL will not be accessible publicly and XML feed will be "
 "uploaded manually on the Facebook catalog."
 msgstr ""
+"Manual: la URL del feed no será accesible públicamente y el feed XML será"
+"subido manualmente en el catálogo de Facebook".
 
 #. module: facebook_ads_feeds
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.facebook_shop_form
 msgid "Manually Create Feeds"
-msgstr ""
+msgstr "Crear feeds Manualmente"
 
 #. module: facebook_ads_feeds
 #: model:ir.ui.menu,name:facebook_ads_feeds.mappings_fields
 msgid "Mapping"
-msgstr ""
+msgstr "Mapeo"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__mapping_count
 msgid "Mapping Count"
-msgstr ""
+msgstr "Recuento de mapas"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_field_mappning_line__model_field_id
 msgid "Model Field"
-msgstr ""
+msgstr "Campo Modelo"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_product_product__mpn
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_product_template__mpn
 msgid "Mpn No."
-msgstr ""
+msgstr "Mpn No."
 
 #. module: facebook_ads_feeds
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.facebook_shop_form
 msgid "NAME"
-msgstr ""
+msgstr "Nombre"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_field_mappning__name
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,help:facebook_ads_feeds.field_fb_facebook_shop__limit
 msgid "Product Limit:- Selected limit product will generate inside feed xml."
-msgstr ""
+msgstr "Límite del producto:- El producto de límite seleccionado se generará dentro del feed xml."
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__pricelist_id
 msgid "Product Pricelist"
-msgstr ""
+msgstr "Lista de Precios del producto"
 
 #. module: facebook_ads_feeds
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.facebook_shop_form
 msgid "Product Select"
-msgstr ""
+msgstr "Seleccionar producto"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__product_selection_type
 msgid "Product Select Way"
-msgstr ""
+msgstr "Forma de seleccionar producto"
 
 #. module: facebook_ads_feeds
 #: model:ir.model,name:facebook_ads_feeds.model_product_template
@@ -443,22 +449,22 @@ msgstr "Plantilla de producto"
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__product_ids_rel
 msgid "Products"
-msgstr ""
+msgstr "Productos"
 
 #. module: facebook_ads_feeds
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.facebook_shop_form
 msgid "Regenerate Token Url"
-msgstr ""
+msgstr "Url del token regenerado"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_fields__required
 msgid "Required"
-msgstr ""
+msgstr "Requerido"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,help:facebook_ads_feeds.field_fb_field_mappning_line__facebook_field_id
 msgid "Select the facebook field name that you want to map with Odoo field"
-msgstr ""
+msgstr "Seleccione el nombre del campo de Facebook que se desea asignar con el campo Odoo"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,help:facebook_ads_feeds.field_fb_facebook_shop__product_selection_type
@@ -466,79 +472,82 @@ msgid ""
 "Select wether you want to select the product manually or with the help of "
 "domain"
 msgstr ""
+"Seleccione si desea seleccionar el producto manualmente o con la ayuda de"
+"Dominio"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,help:facebook_ads_feeds.field_fb_field_mappning_line__fixed
 msgid "Select wether you want to send the fixed data or the field data"
-msgstr ""
+msgstr "Seleccione si desea enviar los datos fijos o los datos del campo"
 
 #. module: facebook_ads_feeds
 #: model:ir.ui.menu,name:facebook_ads_feeds.facebook_settings
 msgid "Setting"
-msgstr ""
+msgstr "Configuración"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__name
 msgid "Shop Name"
-msgstr ""
+msgstr "Nombre de la Tienda"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__shop_url
 msgid "Shop Url"
-msgstr ""
+msgstr "Url de la Tienda"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_field_mappning_line__fixed_text
 msgid "Text"
-msgstr ""
+msgstr "Texto"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,help:facebook_ads_feeds.field_fb_field_mappning_line__default
 msgid "The data enter here will be send when there is no data in the field"
-msgstr ""
+msgstr "Los datos ingresados aquí se enviarán cuando no haya datos en el campo"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__feed_token
 msgid "Token"
-msgstr ""
+msgstr "Token"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__enable_token
 msgid "Token Enabled"
-msgstr ""
+msgstr "Token habilitado"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_attachment_mapping__updated
 msgid "Updated"
-msgstr ""
+msgstr "Actualizado"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__multi_images
 msgid "Want to sync Multi Images at facebook catalog"
-msgstr ""
+msgstr "Quiere sincronizar múltiples imágenes en el catálogo de Facebook"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__sync_product_variant
 msgid "Want to sync product variants at facebook catalog"
-msgstr ""
+msgstr "Aquiere sincronizar variantes de productos en el catálogo de Facebook"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__warehouse_id
 msgid "Warehouse"
-msgstr ""
+msgstr "Almacén"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,help:facebook_ads_feeds.field_fb_facebook_shop__shop_url
 msgid "Write your domain name of your website"
-msgstr ""
+msgstr "Escriba el nombre de dominio de su sitio web"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,help:facebook_ads_feeds.field_fb_facebook_shop__pricelist_id
 msgid ""
 "select the pricelist according to which your product price will get selected"
 msgstr ""
+"seleccione la lista de precios según la cual se seleccionará el precio de su producto"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__website_id
 msgid "website"
-msgstr ""
+msgstr "Sitio Web"
