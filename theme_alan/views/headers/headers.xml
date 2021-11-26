@@ -146,6 +146,9 @@
                     </t>
                 </div>
             </div>
+            <div class='row separador'>
+                <img t-attf-src="theme_alan/static/src/img/LINE2-small.png"/>
+            </div>
         </nav>
     </xpath>
 </template>
