@@ -51,9 +51,9 @@
               <field name="feed_url"/>
             </group>
             <div class="text-danger">
-              <p>Automatic: Feed URL will be accessible publicly and can be used inside the Facebook catalog for regular fetch.</p>
-              <p>Manual: Feed URL will not be accessible publicly and XML feed will be uploaded manually on the Facebook catalog.</p>
-              <p>If you will re-generate token enabled feed URL then you will have to update on Facebook too.</p>
+              <p>Automático: la URL del feed será accesible públicamente y se puede utilizar dentro del catálogo de Facebook para obtener información con regularidad.</p>
+              <p>Manual: la URL del feed no será accesible públicamente y el feed XML se cargará manualmente en el catálogo de Facebook.</p>
+              <p>Si va a volver a generar la URL del feed con token habilitado, también tendrá que actualizar en Facebook</p>
             </div>
           </group>
           <notebook>
