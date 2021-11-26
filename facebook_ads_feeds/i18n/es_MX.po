@@ -49,39 +49,39 @@ msgstr "Catálogo de Facebook para búsqueda regular."
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_fields__g_beg
 msgid "Begins With 'g:'"
-msgstr ""
+msgstr "Empieza por 'g:'"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_product_product__brand
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_product_template__brand
 msgid "Brand"
-msgstr ""
+msgstr "Marca"
 
 #. module: facebook_ads_feeds
 #: model:ir.ui.menu,name:facebook_ads_feeds.facebook_shop_menu
 msgid "Catalogs"
-msgstr ""
+msgstr "Catálogos"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_google_category__google_categ_id
 msgid "Categ ID"
-msgstr ""
+msgstr "Categoría ID"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__public_categ_ids
 #: model:ir.model.fields.selection,name:facebook_ads_feeds.selection__fb_facebook_shop__product_selection_type__category
 msgid "Category"
-msgstr ""
+msgstr "Categoria"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__content_language_id
 msgid "Content Language"
-msgstr ""
+msgstr "Idioma del Contenido"
 
 #. module: facebook_ads_feeds
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.facebook_shop_form
 msgid "Create Cron"
-msgstr ""
+msgstr "Crear Cron"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_attachment_mapping__create_uid
@@ -91,7 +91,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_field_mappning_line__create_uid
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_google_category__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creado por:"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_attachment_mapping__create_date
@@ -101,27 +101,27 @@ msgstr ""
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_field_mappning_line__create_date
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_google_category__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creado en:"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__crone_id
 msgid "Cron Detail"
-msgstr ""
+msgstr "Detalle del Cron"
 
 #. module: facebook_ads_feeds
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.facebook_shop_form
 msgid "Cron Details"
-msgstr ""
+msgstr "Detalles del cron"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__currency_id
 msgid "Currency"
-msgstr ""
+msgstr "Divisa"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_field_mappning_line__default
 msgid "Default"
-msgstr ""
+msgstr "Defecto"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_attachment_mapping__display_name
@@ -131,13 +131,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_field_mappning_line__display_name
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_google_category__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nombre para mostrar"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__domain_input
 #: model:ir.model.fields.selection,name:facebook_ads_feeds.selection__fb_facebook_shop__product_selection_type__domain
 msgid "Domain"
-msgstr ""
+msgstr "Dominio"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,help:facebook_ads_feeds.field_fb_facebook_shop__domain_input
@@ -145,90 +145,92 @@ msgid ""
 "Domain Filter:- Using this only filtered products will generate inside feed "
 "xml."
 msgstr ""
+"Filtro de dominio: el uso de este solo productos filtrados generará un feed interno"
+"xml."
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,help:facebook_ads_feeds.field_fb_facebook_shop__enable_token
 msgid "Enbale if you want to secure publicly access Feed URL"
-msgstr ""
+msgstr "Habilítelo si desea proteger la URL del feed de acceso público"
 
 #. module: facebook_ads_feeds
 #: model:ir.actions.act_window,name:facebook_ads_feeds.fb_attachment_mapping_action
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.fb_attachment_mapping_form
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.fb_attachment_mapping_tree
 msgid "FB Attachment"
-msgstr ""
+msgstr "Accesorio FB"
 
 #. module: facebook_ads_feeds
 #: model:ir.model,name:facebook_ads_feeds.model_fb_attachment_mapping
 msgid "Facebook Attachments"
-msgstr ""
+msgstr "Archivos adjuntos de Facebook"
 
 #. module: facebook_ads_feeds
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.facebook_product_template_form
 msgid "Facebook Attributes"
-msgstr ""
+msgstr "Atributos de Facebook"
 
 #. module: facebook_ads_feeds
 #: model:ir.actions.act_window,name:facebook_ads_feeds.facebook_shop_action
 #: model:ir.ui.menu,name:facebook_ads_feeds.facebook_shops_menu
 msgid "Facebook Catalog"
-msgstr ""
+msgstr "Catálogo de Facebook"
 
 #. module: facebook_ads_feeds
 #: model:ir.ui.menu,name:facebook_ads_feeds.facebook_fields_menu
 msgid "Facebook Catalog Fields"
-msgstr ""
+msgstr "Campos del Catálogo de Facebook"
 
 #. module: facebook_ads_feeds
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.facebook_shop_form
 msgid "Facebook Catalog Form"
-msgstr ""
+msgstr "Formulario del catálogo de Facebook"
 
 #. module: facebook_ads_feeds
 #: model:ir.actions.act_window,name:facebook_ads_feeds.facebook_fields_action
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_field_mappning_line__facebook_field_id
 msgid "Facebook Fields"
-msgstr ""
+msgstr "Campos de Facebook"
 
 #. module: facebook_ads_feeds
 #: model:ir.model,name:facebook_ads_feeds.model_fb_field_mappning
 msgid "Facebook Fields Mapping"
-msgstr ""
+msgstr "Mapeo de campos de Facebook"
 
 #. module: facebook_ads_feeds
 #: model:ir.ui.menu,name:facebook_ads_feeds.facebook_market_menu
 msgid "Facebook Marketing"
-msgstr ""
+msgstr "Marketing de Facebook"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_attachment_mapping__fb_shop
 msgid "Facebook Shop"
-msgstr ""
+msgstr "Tienda de Facebook"
 
 #. module: facebook_ads_feeds
 #: model:ir.model,name:facebook_ads_feeds.model_fb_facebook_shop
 msgid "Facebook Shops"
-msgstr ""
+msgstr "Tiendas de Facebook"
 
 #. module: facebook_ads_feeds
 #: model:ir.model,name:facebook_ads_feeds.model_fb_facebook_fields
 msgid "Facebook fields"
-msgstr ""
+msgstr "Campos de Facebook"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__feeds_security
 msgid "Feed Security"
-msgstr ""
+msgstr "Seguridad de los feed"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__feed_url
 msgid "Feed URL"
-msgstr ""
+msgstr "Url del Feed"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_fields__name
 msgid "Field"
-msgstr ""
+msgstr "Campo"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_facebook_shop__field_mapping_id
@@ -237,42 +239,42 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.field_mappning_form
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.field_mappning_tree
 msgid "Field Mapping"
-msgstr ""
+msgstr "Mapeo del campo"
 
 #. module: facebook_ads_feeds
 #: model:ir.actions.act_window,name:facebook_ads_feeds.field_mappning_action
 msgid "Field Mappning"
-msgstr ""
+msgstr "Mapeo del Campo"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,help:facebook_ads_feeds.field_fb_field_mappning_line__field_mapping_id
 msgid "Field with which you want to map"
-msgstr ""
+msgstr "Campo con el que desea mapear"
 
 #. module: facebook_ads_feeds
 #: model:ir.model,name:facebook_ads_feeds.model_fb_field_mappning_line
 msgid "Fields mapping Line"
-msgstr ""
+msgstr "Línea de mapeo de campos"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_field_mappning__field_mapping_line_ids
 msgid "Fileds To Mapped"
-msgstr ""
+msgstr "Archivos mapeados"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_fb_field_mappning_line__fixed
 msgid "Fixed"
-msgstr ""
+msgstr "Reparado"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,help:facebook_ads_feeds.field_fb_field_mappning_line__fixed_text
 msgid "Fixed data that you want to send"
-msgstr ""
+msgstr "Datos fijos que desea enviar"
 
 #. module: facebook_ads_feeds
 #: model:ir.model,name:facebook_ads_feeds.model_google_category
 msgid "Google Cateegories"
-msgstr ""
+msgstr "Categoria de Google"
 
 #. module: facebook_ads_feeds
 #: model:ir.actions.act_window,name:facebook_ads_feeds.google_category_action
@@ -282,12 +284,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.google_category_form
 #: model_terms:ir.ui.view,arch_db:facebook_ads_feeds.google_category_tree
 msgid "Google Category"
-msgstr ""
+msgstr "Categoria de Google"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_google_category__name
 msgid "Google Category Name"
-msgstr ""
+msgstr "Nombre de Categoría de Google"
 
 #. module: facebook_ads_feeds
 #: model:ir.model.fields,field_description:facebook_ads_feeds.field_product_product__gtin
