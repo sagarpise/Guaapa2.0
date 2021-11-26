@@ -215,7 +215,7 @@ $-menu-color: o-color('menu-custom') or o-color('menu');
             
         }
         .navbar-light .navbar-nav .nav-link {
-            color: #fff !important;
+            color: rgba(255, 255, 255, 0.5) !important;
         }
     }
 }
