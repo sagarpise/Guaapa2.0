@@ -214,12 +214,13 @@ $-menu-color: o-color('menu-custom') or o-color('menu');
             background: inherit !important;
             
         }
-        .nav-link.active {
+        .navbar-light .navbar-nav .nav-link.active {
             color: #fff !important;
         }
-    
+        
         .navbar-light .navbar-nav .nav-link {
-            color: rgba(255, 255, 255, 0.5) !important;
+            color: rgba(147, 147, 147, 0.5);
+
         }
     }
 }
