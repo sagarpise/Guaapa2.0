@@ -10,7 +10,7 @@
     <field name="arch" type="xml">
       <form string="Facebook Catalog Form">
         <header>
-          <button name="create_xml" class="btn-warning" type="object" string="Manually Create Feeds"/>
+          <button name="create_xml" class="btn-warning" type="object" string="Crear feeds manualmente"/>
           <button name="regenerate_token" type="object" string="Regenerate Token Url" attrs="{'invisible':[('enable_token','=',False),('feed_token','=',False)]}" help="If you will re-generate token enabled feed URL then you will have to update on Facebook too."/>
         </header>
         <sheet>
