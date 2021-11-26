@@ -208,10 +208,14 @@ $-menu-color: o-color('menu-custom') or o-color('menu');
     .as-main-header {
         #top_menu_container{
             background: black;
-            color: #FFFFFF;
+            color: #fff !important;
         }
         .navbar-collapse {
             background: inherit !important;
+            
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: #fff !important;
         }
     }
 }
