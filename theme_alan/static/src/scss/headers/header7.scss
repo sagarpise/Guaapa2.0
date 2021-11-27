@@ -711,4 +711,9 @@
         }
     }
 
+    @media (max-width: 640px) and (min-width: 320px){
+        #home_carousel_banner .carousel-item{
+            padding-top: 95px !important;
+        }
+    }
 }
