@@ -219,12 +219,16 @@ $-menu-color: o-color('menu-custom') or o-color('menu');
         }
         
         .navbar-light .navbar-nav .nav-link {
-            color: rgba(147, 147, 147, 0.5);
+            color: rgba(255, 255, 255, 0.5);
 
         }
 
         a.nav-link.nav-link.o_default_snippet_text {
             color: black !important;
+        }
+
+        .navbar  {
+            background-color: black !important;
         }
     }
 }
