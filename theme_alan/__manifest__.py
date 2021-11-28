@@ -16,6 +16,7 @@
         'views/headers/switch.xml',
         'views/footers/footers.xml',
         'views/footers/switch.xml',
+        'views/home.xml',
         'views/megamenu.xml',
         'views/product_rating.xml',
         'views/product_label.xml',

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="website_layout_inherit_homepage" name="Home page modificated" inherit_id="website.homepage">
+        <xpath expr="//t[@t-set='pageName']" position="replace">
+            <div id="wrap" class="oe_structure oe_empty">
+                <section class="s_carousel_wrapper" data-vxml="001" data-snippet="s_carousel" data-name="Carousel" style=""> 
+                    <div id="myCarousel1625628024792" class="s_carousel s_carousel_default carousel slide" data-interval="10000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item" data-name="Slide" data-original-id="1152" data-mimetype="image/png">
+                                <img id="act-bn" class="d-block w-100" src="/theme_alan/static/src/img/Black_Friday_Showcase.svg"/>
+                            </div>
+                            <div class="carousel-item active" data-name="Slide" data-original-id="1153" data-mimetype="image/png">
+                                <img class="d-block w-100" src="/theme_alan/static/src/img/Black_Friday_Showcase.svg"/>
+                            </div>
+                            <div class="carousel-item" data-name="Slide" data-original-id="1154" data-mimetype="image/png">
+                                <img class="d-block w-100" src="/theme_alan/static/src/img/Black_Friday_Showcase.svg"/>
+                            </div>
+                            <div class="carousel-item" data-name="Slide" data-original-id="1155" data-mimetype="image/png">
+                                <img class="d-block w-100" src="/theme_alan/static/src/img/Black_Friday_Showcase.svg"/>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev o_not_editable o_we_no_overlay" href="#myCarousel1625628024792" data-slide="prev" role="img" aria-label="Anterior" title="Anterior">
+                            <span class="carousel-control-prev-icon"/>
+                            <span class="sr-only o_default_snippet_text">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next o_not_editable o_we_no_overlay" href="#myCarousel1625628024792" data-slide="next" role="img" aria-label="Siguiente" title="Siguiente">
+                            <span class="carousel-control-next-icon"/>
+                            <span class="sr-only o_default_snippet_text">Siguiente</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>
