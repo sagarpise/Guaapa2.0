@@ -31,7 +31,7 @@
         'data/payment_icons_data.xml',
         'data/payment_acquirer_data.xml',
         'data/cron_data.xml',
-        'views/payment_portal_templates.xml'
+        #'views/payment_portal_templates.xml'
     ],
     'images': ['static/description/banner.jpg'],
     'installable': True,

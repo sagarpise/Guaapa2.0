@@ -6,7 +6,6 @@
             <field name="image_128" type="base64" file="payment_openpay_knk/static/description/icon.png" />
             <field name="provider">openpay_card</field>
             <field name="company_id" ref="base.main_company" />
-            <field name="view_template_id" ref="openpay_form" />
             <field name="module_id" ref="base.module_payment_openpay_knk"/>
             <field name="state">test</field>
             <field name="pre_msg">
@@ -40,7 +39,6 @@
             <field name="image_128" type="base64" file="payment_openpay_knk/static/description/icon.png" />
             <field name="provider">openpay_store</field>
             <field name="company_id" ref="base.main_company" />
-            <field name="view_template_id" ref="openpay_form" />
             <field name="module_id" ref="base.module_payment_openpay_knk"/>
             <field name="state">test</field>
             <field name="pre_msg">
@@ -90,7 +88,6 @@
             <field name="image_128" type="base64" file="payment_openpay_knk/static/description/icon.png" />
             <field name="provider">openpay_bank</field>
             <field name="company_id" ref="base.main_company" />
-            <field name="view_template_id" ref="openpay_form" />
             <field name="module_id" ref="base.module_payment_openpay_knk"/>
             <field name="state">test</field>
             <field name="pre_msg">
@@ -145,7 +142,6 @@
             <field name="image_128" type="base64" file="payment_openpay_knk/static/description/icon.png" />
             <field name="provider">openpay_alipay</field>
             <field name="company_id" ref="base.main_company" />
-            <field name="view_template_id" ref="openpay_form" />
             <field name="module_id" ref="base.module_payment_openpay_knk"/>
             <field name="state">test</field>
             <field name="pre_msg">
