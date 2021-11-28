@@ -7,16 +7,20 @@
                     <div id="myCarousel1625628024792" class="s_carousel s_carousel_default carousel slide" data-interval="10000">
                         <div class="carousel-inner">
                             <div class="carousel-item" data-name="Slide" data-original-id="1152" data-mimetype="image/png">
-                                <img id="act-bn" class="d-block w-100" src="/theme_alan/static/src/img/Black_Friday_Showcase.svg"/>
+                                <img class="d-block d-md-none w-100" src="/theme_alan/static/src/img/Black_Friday_Responsive.svg" loading="lazy" alt="" data-original-id="10023" data-original-src="" data-mimetype="image/svg+xml" data-resize-width="992" data-original-title="" title="" aria-describedby="tooltip361705"/>
+                                <img class="d-none d-md-block w-100" src="/theme_alan/static/src/img/Black_Friday_Showcase.svg" loading="lazy" alt="" data-original-title="" title="" aria-describedby="tooltip361705" data-original-id="19287" data-original-src="/theme_alan/static/src/img/Black_Friday_Showcase.svg" data-mimetype="image/svg+xml" data-resize-width="undefined"/>
                             </div>
                             <div class="carousel-item active" data-name="Slide" data-original-id="1153" data-mimetype="image/png">
-                                <img class="d-block w-100" src="/theme_alan/static/src/img/Black_Friday_Showcase.svg"/>
+                                <img class="d-block d-md-none w-100" src="/theme_alan/static/src/img/Black_Friday_Responsive.svg" loading="lazy" alt="" data-original-id="10023" data-original-src="" data-mimetype="image/svg+xml" data-resize-width="992" data-original-title="" title="" aria-describedby="tooltip361705"/>
+                                <img class="d-none d-md-block w-100" src="/theme_alan/static/src/img/Black_Friday_Showcase.svg" loading="lazy" alt="" data-original-title="" title="" aria-describedby="tooltip361705" data-original-id="19287" data-original-src="/theme_alan/static/src/img/Black_Friday_Showcase.svg" data-mimetype="image/svg+xml" data-resize-width="undefined"/>
                             </div>
                             <div class="carousel-item" data-name="Slide" data-original-id="1154" data-mimetype="image/png">
-                                <img class="d-block w-100" src="/theme_alan/static/src/img/Black_Friday_Showcase.svg"/>
+                                <img class="d-block d-md-none w-100" src="/theme_alan/static/src/img/Black_Friday_Responsive.svg" loading="lazy" alt="" data-original-id="10023" data-original-src="" data-mimetype="image/svg+xml" data-resize-width="992" data-original-title="" title="" aria-describedby="tooltip361705"/>
+                                <img class="d-none d-md-block w-100" src="/theme_alan/static/src/img/Black_Friday_Showcase.svg" loading="lazy" alt="" data-original-title="" title="" aria-describedby="tooltip361705" data-original-id="19287" data-original-src="/theme_alan/static/src/img/Black_Friday_Showcase.svg" data-mimetype="image/svg+xml" data-resize-width="undefined"/>
                             </div>
                             <div class="carousel-item" data-name="Slide" data-original-id="1155" data-mimetype="image/png">
-                                <img class="d-block w-100" src="/theme_alan/static/src/img/Black_Friday_Showcase.svg"/>
+                                <img class="d-block d-md-none w-100" src="/theme_alan/static/src/img/Black_Friday_Responsive.svg" loading="lazy" alt="" data-original-id="10023" data-original-src="" data-mimetype="image/svg+xml" data-resize-width="992" data-original-title="" title="" aria-describedby="tooltip361705"/>
+                                <img class="d-none d-md-block w-100" src="/theme_alan/static/src/img/Black_Friday_Showcase.svg" loading="lazy" alt="" data-original-title="" title="" aria-describedby="tooltip361705" data-original-id="19287" data-original-src="/theme_alan/static/src/img/Black_Friday_Showcase.svg" data-mimetype="image/svg+xml" data-resize-width="undefined"/>
                             </div>
                         </div>
                         <a class="carousel-control-prev o_not_editable o_we_no_overlay" href="#myCarousel1625628024792" data-slide="prev" role="img" aria-label="Anterior" title="Anterior">
