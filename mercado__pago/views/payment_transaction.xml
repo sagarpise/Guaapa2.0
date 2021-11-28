@@ -4,9 +4,9 @@
 		<record id="payment_transaction_form_mercadopago" model="ir.ui.view">
 			<field name="name">payment.transaction.form.mercadopago</field>
 			<field name="model">payment.transaction</field>
-			<field name="inherit_id" ref="payment.transaction_form" />
+			<field name="inherit_id" ref="payment.payment_transaction_form" />
 			<field name="arch" type="xml">
-				<field name="date" position="after">                
+				<field name="create_date" position="after">                
 					<field name="mp_response" readonly="1" />            
 				</field>
 			</field>

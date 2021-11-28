@@ -14,7 +14,7 @@
     "images": ["images/banner.png"],
     'depends': ['base','website_sale','payment','account'],
     'data': [
-                'views/templates.xml',
+                #'views/templates.xml',
                 'views/payment_acquirer.xml',
                 'views/sale_order.xml',
                 'views/payment_transaction.xml',
@@ -24,5 +24,16 @@
     'qweb': [
               
             ],
+    'assets': {
+        'web.assets_frontend': [
+            'mercado__pago/static/src/js/jquery.js',
+            'mercado__pago/static/src/js/mercado-pago.js',
+            'mercado__pago/static/src/js/framework.js',
+            'mercado__pago/static/src/css/mercado-pago.css',
+        ],
+        'assets_backend':[
+            'mercado__pago/static/src/css/mercado-pago.css',
+        ],
+    },
     'installable': True,
 }
