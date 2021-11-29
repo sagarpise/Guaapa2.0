@@ -8857,7 +8857,7 @@ msgstr "Cortos"
 #. module: theme_alan
 #: model_terms:theme.ir.ui.view,arch:theme_alan.user_sign_in_extend
 msgid "Sign in"
-msgstr "Resgistrarse"
+msgstr "Registrarse"
 
 #. module: theme_alan
 #: model_terms:theme.ir.ui.view,arch:theme_alan.as_login
