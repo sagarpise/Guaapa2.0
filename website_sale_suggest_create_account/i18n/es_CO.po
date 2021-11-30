@@ -42,7 +42,7 @@ msgstr ""
 msgid ""
 "<span>Sign up and checkout</span>\n"
 "                    <span class=\"fa fa-long-arrow-right\"/>"
-msgstr "Resgistrarse y pagar"
+msgstr "Registrarse y pagar"
 
 #~ msgid "<span>Checkout without sign up</span>"
 #~ msgstr "Pago sin registro"
