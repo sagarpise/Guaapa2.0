@@ -62,7 +62,7 @@
         </xpath>
     </template>
     <!-- Product price -->
-    <template id="as_shop_product_price" name="Product Item" inherit_id="website_sale.products_price" customize_show="True" priority="23">
+    <template id="as_shop_product_price" name="Product Item" inherit_id="website_sale.product_price" customize_show="True" priority="23">
         <xpath expr="//div[hasclass('product_price')]" position="replace">
             <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price d-inline-block mt-2 mb-3">
                 <h3 class="css_editable_mode_hidden">
