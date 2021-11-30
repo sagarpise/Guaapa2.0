@@ -46,6 +46,30 @@
             }
         }
 
+        .marquee {
+            width: 100%;
+            background-color: red;
+            margin: 0 auto;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 5px;
+            font-size: 18px;
+            /*position: absolute;*/
+            color: #fff;
+            text-shadow: #000 1px 1px 0;
+            font-family: Tahoma, Arial, sans-serif;
+            -webkit-animation: marquee 20s linear infinite;
+          }
+          
+          @-webkit-keyframes marquee {
+            0% {
+              text-indent: 260px;
+            }
+            100% {
+              text-indent: -260px;
+            }
+          }
+
         .js_language_selector,
         .o_pricelist_dropdown {
             .dropdown-toggle {
