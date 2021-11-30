@@ -61,4 +61,26 @@
             </div>
         </xpath>
     </template>
+    <!-- Product price -->
+    <template id="as_shop_product_price" name="Product Item" inherit_id="website_sale.products_price" customize_show="True" priority="23">
+        <xpath expr="//div[hasclass('product_price')]" position="replace">
+            <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price d-inline-block mt-2 mb-3">
+                <h3 class="css_editable_mode_hidden">
+                    <span itemprop="price" style="display:none;" t-esc="combination_info['price']"/>
+                    <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name"/>
+                    <span t-attf-class="text-danger oe_default_price ml-1 h5 {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="text-decoration: line-through; white-space: nowrap;"
+                        t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"
+                    />
+                    <span class="oe_price" style="white-space: nowrap;" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                </h3>
+                <h3 class="css_non_editable_mode_hidden decimal_precision" t-att-data-precision="str(website.currency_id.decimal_places)">
+                    <span t-field="product.list_price"
+                        t-options='{
+                        "widget": "monetary",
+                        "display_currency": product.currency_id,
+                    }'/>
+                </h3>
+            </div>
+        </xpath>
+    </template>
 </odoo>
