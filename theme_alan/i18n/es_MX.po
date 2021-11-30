@@ -67,7 +67,7 @@ msgstr "%s revisiones"
 #: code:addons/theme_alan/static/src/xml/selector_dialog.xml:0
 #, python-format
 msgid "&times;"
-msgstr ""
+msgstr "&Horas"
 
 #. module: theme_alan
 #. openerp-web
@@ -649,7 +649,7 @@ msgstr "<span> Ninguna marca disponible </span>"
 #. module: theme_alan
 #: model_terms:theme.ir.ui.view,arch:theme_alan.as_login
 msgid "<span>Reset Password</span>"
-msgstr "<span> Cambiar la contraseña </span>"
+msgstr "<span>Cambiar la contraseña</span>"
 
 #. module: theme_alan
 #. openerp-web
