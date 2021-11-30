@@ -47,13 +47,13 @@
         }
 
         .marquee {
-           /* width: 260px;*/
+            width: 100%;
             background-color: red;
             margin: 0 auto;
             overflow: hidden;
             white-space: nowrap;
             font-size: 20px;
-            position: absolute;
+            /*position: absolute;*/
             color: #fff;
             text-shadow: #000 1px 1px 0;
             font-family: Tahoma, Arial, sans-serif;
