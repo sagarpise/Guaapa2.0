@@ -333,6 +333,9 @@ span[data-oe-type="monetary"]{
 }
 
 .oe_default_price span.oe_currency_value{
-    color: black !important;;
+    color: black !important;
 }
 
+#products_grid .oe_product_cart .o_wsale_product_information .o_wsale_product_information_text .product_price .h5{
+    color: red !important;
+}
