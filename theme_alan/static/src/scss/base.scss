@@ -320,10 +320,19 @@ img {
     }
 }
 
-span.oe_currency_value {
-    color: red;
-}
-
 del span.oe_currency_value {
     color: black;
 }
+
+span[data-oe-type="monetary"]{
+    color: red;
+}
+
+.oe_price{
+    color: red !important;
+}
+
+.oe_default_price span.oe_currency_value{
+    color: black !important;;
+}
+
