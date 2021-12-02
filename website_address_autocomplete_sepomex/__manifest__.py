@@ -17,7 +17,7 @@
         'views/templates.xml',
         'views/my_details.xml',
         'views/checkout_total.xml',
-        'views/shop_address.xml',
+        #'views/shop_address.xml',
     ],
     "assets": { 
         'web.assets_frontend' : [ 
