@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--<template name="Address" id="address_l10n_mx" inherit_id="website_address_autocomplete_sepomex.shop_addres_sepomex">
+        <xpath expr="//option[@t-att-value='s.id']" position="attributes">
+            <attribute name="t-att-id">s.code</attribute>
+        </xpath>
+    </template>-->
+</odoo>

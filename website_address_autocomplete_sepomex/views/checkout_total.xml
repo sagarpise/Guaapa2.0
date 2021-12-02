@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <template name="cart_summary_position" id="cart_summary_position" inherit_id="website_sale.address">
+        <xpath expr="//div[@class='col-12 col-xl-auto order-xl-2 d-none d-xl-block']" position="replace">
+            <!--empty-->
+        </xpath>
+        <xpath expr="//div[@class='col-12 col-xl order-xl-1 oe_cart']" position="after">
+            <div class="col-12 col-xl-auto order-xl-2 d-none d-xl-block">
+                <t t-call="website_sale.cart_summary">
+                    <t t-set="hide_coupon">Verdadero</t>
+                    <t t-set="redirect" t-valuef="/shop/address"/></t>
+            </div>
+        </xpath>
+    </template>
+</odoo>
