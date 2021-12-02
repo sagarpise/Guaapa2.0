@@ -193,23 +193,27 @@ odoo.define("l10n_mx_website_sale.website_sale", function (require) {
                 },
             }).then(function (data) {
                 // placeholder 
-                //alert(JSON.stringify(data))
                 $("input[name='phone']").attr('placeholder', data.phone_code !== 0 ? '+'+ data.phone_code : '');
     
                 // populate states and display
                 var selectStates = $("select[name='state_id']");
                 // dont reload state at first loading (done in qweb)
-                //alert(selectStates.data('init'))
                 
                 if (selectStates.data('init')===1) {
                     if (data.states.length || data.state_required) {
+                        var state_id = selectStates.val();
                         selectStates.html('');
                         _.each(data.states, function (x) {
                             var opt = $('<option>').text(x[1])
                                 .attr('value', x[0])
-                                .attr('data-code', x[2]);
+                                .attr('data-code', x[2])
+                                .attr('id', x[2]);
+                                
                             selectStates.append(opt);
                         });
+                        if(state_id) {
+                            selectStates.find(`option[value=${state_id}]`).prop("selected", "true");
+                        }
                         selectStates.parent('div').show();
                     } else {
                         selectStates.val('').parent('div').hide();

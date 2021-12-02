@@ -91,16 +91,16 @@ class CustomerPortalCity(CustomerPortal):
         return response
 
 
-class CustomerWebsite(WebsiteSale):
-    
-    @http.route(['/shop/country_infos/<model("res.country"):country>'], type='json', auth="public", methods=['POST'], website=True)
-    def country_infos(self, country, mode, **kw):
-        dic = dict(
-            fields=country.get_address_fields(),
-            states=[(485, 'Aguascalientes', 'AGU'), (486, 'Baja California', 'BCN'), (487, 'Baja California Sur', 'BCS'), (490, 'Campeche', 'CAM'), (488, 'Chihuahua', 'CHH'), (492, 'Chiapas', 'CHP'), (491, 'Coahuila', 'COA'), (489, 'Colima', 'COL'), (493, 'Ciudad de México', 'DIF'), (494, 'Durango', 'DUR'), (1388, 'EDOMEX', 'EDOMEX'), (495, 'Guerrero', 'GRO'), (496, 'Guanajuato', 'GUA'), (497, 'Hidalgo', 'HID'), (498, 'Jalisco', 'JAL'), (501, 'México', 'MEX'), (499, 'Michoacán', 'MIC'), (500, 'Morelos', 'MOR'), (502, 'Nayarit', 'NAY'), (503, 'Nuevo León', 'NLE'), (504, 'Oaxaca', 'OAX'), (505, 'Puebla', 'PUE'), (507, 'Querétaro', 'QUE'), (506, 'Quintana Roo', 'ROO'), (508, 'Sinaloa', 'SIN'), (509, 'San Luis Potosí', 'SLP'), (510, 'Sonora', 'SON'), (511, 'Tabasco', 'TAB'), (513, 'Tamaulipas', 'TAM'), (512, 'Tlaxcala', 'TLA'), (514, 'Veracruz', 'VER'), (515, 'Yucatán', 'YUC'), (516, 'Zacatecas', 'ZAC')],
-            phone_code=country.phone_code,
-            zip_required=country.zip_required,
-            state_required=country.state_required,
-        )
-        _logger.info(dic)
-        return dic
+#class CustomerWebsite(WebsiteSale):
+#    
+#    @http.route(['/shop/country_infos/<model("res.country"):country>'], type='json', auth="public", methods=['POST'], website=True)
+#    def country_infos(self, country, mode, **kw):
+#        dic = dict(
+#            fields=country.get_address_fields(),
+#            states=[(485, 'Aguascalientes', 'AGU'), (486, 'Baja California', 'BCN'), (487, 'Baja California Sur', 'BCS'), (490, 'Campeche', 'CAM'), (488, 'Chihuahua', 'CHH'), (492, 'Chiapas', 'CHP'), (491, 'Coahuila', 'COA'), (489, 'Colima', 'COL'), (493, 'Ciudad de México', 'DIF'), (494, 'Durango', 'DUR'), (1388, 'EDOMEX', 'EDOMEX'), (495, 'Guerrero', 'GRO'), (496, 'Guanajuato', 'GUA'), (497, 'Hidalgo', 'HID'), (498, 'Jalisco', 'JAL'), (501, 'México', 'MEX'), (499, 'Michoacán', 'MIC'), (500, 'Morelos', 'MOR'), (502, 'Nayarit', 'NAY'), (503, 'Nuevo León', 'NLE'), (504, 'Oaxaca', 'OAX'), (505, 'Puebla', 'PUE'), (507, 'Querétaro', 'QUE'), (506, 'Quintana Roo', 'ROO'), (508, 'Sinaloa', 'SIN'), (509, 'San Luis Potosí', 'SLP'), (510, 'Sonora', 'SON'), (511, 'Tabasco', 'TAB'), (513, 'Tamaulipas', 'TAM'), (512, 'Tlaxcala', 'TLA'), (514, 'Veracruz', 'VER'), (515, 'Yucatán', 'YUC'), (516, 'Zacatecas', 'ZAC')],
+#            phone_code=country.phone_code,
+#            zip_required=country.zip_required,
+#            state_required=country.state_required,
+#        )
+#        _logger.info(dic)
+#        return dic

@@ -106,21 +106,23 @@
                                   <input type="text" name="zip" t-attf-class="form-control #{error.get('zip') and 'is-invalid' or ''}" t-att-value="'zip' in checkout and checkout['zip']"/>
                                 </div>
                               </t>
-                              <div t-attf-class="form-group #{error.get('city') and 'o_has_error' or ''} col-md-8 div_city">
-                                <label class="col-form-label" for="city">*Alcaldía</label>
-                                <input type="text" name="city" t-attf-class="form-control #{error.get('city') and 'is-invalid' or ''}" t-att-value="'city' in checkout and checkout['city']"/>
-                              </div>
                               <t t-if="'zip' in zip_city and zip_city.index('zip') &gt; zip_city.index('city')">
                                 <div t-attf-class="form-group #{error.get('zip') and 'o_has_error' or ''} col-md-4 div_zip">
-                                  <label class="col-form-label label-optional" for="zip">Zip Code</label>
+                                  <label class="col-form-label label-optional" for="zip">*Código Postal</label>
                                   <input type="text" name="zip" t-attf-class="form-control #{error.get('zip') and 'is-invalid' or ''}" t-att-value="'zip' in checkout and checkout['zip']"/>
                                 </div>
                               </t>
+                              <div class="col-12">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" name="changeInputs" id="changeInputs"/>
+                                    <label class="form-check-label" for="changeInputs">Selecciona, sí tienes problemas con el código postal</label>
+                                </div>
+                              </div>
                               <div class="w-100"/>
                               <div t-attf-class="form-group #{error.get('country_id') and 'o_has_error' or ''} col-lg-6 div_country">
-                                <label class="col-form-label" for="country_id">Country</label>
+                                <label class="col-form-label" for="country_id">*País</label>
                                 <select id="country_id" name="country_id" t-attf-class="form-control #{error.get('country_id') and 'is-invalid' or ''}" t-att-mode="mode[1]">
-                                  <option value="">Country...</option>
+                                  <option value="">País...</option>
                                   <t t-foreach="countries" t-as="c">
                                     <option t-att-value="c.id" t-att-selected="c.id == (country and country.id or -1)">
                                       <t t-esc="c.name"/>
@@ -129,15 +131,37 @@
                                 </select>
                               </div>
                               <div t-attf-class="form-group #{error.get('state_id') and 'o_has_error' or ''} col-lg-6 div_state" t-att-style="(not country or not country.state_ids) and 'display: none'">
-                                <label class="col-form-label" for="state_id">State / Province</label>
+                                <label class="col-form-label" for="state_id">*Estado</label>
                                 <select name="state_id" t-attf-class="form-control #{error.get('state_id') and 'is-invalid' or ''}" data-init="1">
-                                  <option value="">State / Province...</option>
+                                  <option value="">*Estado...</option>
                                   <t t-foreach="country_states" t-as="s">
-                                    <option t-att-value="s.id" t-att-selected="s.id == ('state_id' in checkout and country and checkout['state_id'] != '' and int(checkout['state_id']))">
+                                    <option t-att-value="s.id" t-att-selected="s.id == ('state_id' in checkout and country and checkout['state_id'] != '' and int(checkout['state_id']))" t-att-id="s.code">
                                       <t t-esc="s.name"/>
                                     </option>
                                   </t>
                                 </select>
+                              </div>
+                              <div class="w-100"/>
+                              <div class="col-sm-12">
+                                  <div class="row">
+                                    <div t-attf-class="form-group #{error.get('city') and 'o_has_error' or ''} col-lg-6 col-md-12 div_city">
+                                        <label class="col-form-label" for="city">*Alcaldía / Municipio</label>
+                                        <input t-attf-type="{'city_id' in checkout and 'hidden' or 'text'}" name="city" t-attf-class="form-control #{error.get('city') and 'is-invalid' or ''}" t-att-value="'city' in checkout and checkout['city']"/>
+                                        <select name="city_id" t-attf-class="form-control #{error.get('city_id') and 'is-invalid' or ''} #{'city_id' in checkout and 'd-block' or 'd-none'} #{error.get('city') and 'error_city' or ''}" t-att-data-value="'city_id' in checkout and  checkout['city_id'] != '' and  int(checkout['city_id'])" data-init="1">
+                                            <option value="">Seleccionar</option>
+                                        </select>
+                                    </div>
+                                    <div t-attf-class="form-group #{error.get('l10n_mx_edi_colony') and 'has-error' or ''} col-lg-6 col-md-12 div_l10n_mx_edi_colony">
+                                        <label class="control-label" for="l10n_mx_edi_colony">Colonia*</label>
+                                        <select id="l10n_mx_edi_colony" name="l10n_mx_edi_colony" class="form-control">
+                                            <t t-if="'l10n_mx_edi_colony' in checkout and checkout['l10n_mx_edi_colony']">
+                                                <option>
+                                                    <t t-raw="'l10n_mx_edi_colony' in checkout and checkout['l10n_mx_edi_colony']"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                  </div>
                               </div>
                               <div class="w-100"/>
                               <t t-if="mode == ('new', 'billing') and not only_services">

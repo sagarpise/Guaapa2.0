@@ -27,7 +27,11 @@ odoo.define("website_address_autocomplete_sepomex.form", function (require) {
                 "change input#changeInputs": "_changeInputs",
             },
             init: function() {
-                this._getDataWithZipCode;
+                setTimeout(() => {
+                    this._getDataWithZipCode;    
+                },
+                5000 
+                );
             },
             _getDataWithZipCode: function() {
                 const ESTADO_ABREVIATURA = [
