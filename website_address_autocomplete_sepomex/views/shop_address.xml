@@ -22,23 +22,23 @@
                       <div class="col-12 col-xl order-xl-1 oe_cart">
                         <div>
                           <t t-if="mode == ('new', 'billing')">
-                            <h2 class="o_page_header mt8">Your Address
-                                                    <small> or </small>
-                                                    <a role="button" href="/web/login?redirect=/shop/checkout" class="btn btn-primary" style="margin-top: -11px">Log In</a>
+                            <h2 class="o_page_header mt8">Datos personales
+                                                    <small> ó </small>
+                                                    <a role="button" href="/web/login?redirect=/shop/checkout" class="btn btn-primary" style="margin-top: -11px">Inicia sesión</a>
                                                 </h2>
                           </t>
                           <t t-if="mode == ('edit', 'billing')">
-                            <h2 class="o_page_header mt8">Your Address</h2>
+                            <h2 class="o_page_header mt8">Datos personales</h2>
                           </t>
                           <t t-if="mode[1] == 'shipping'">
-                            <h2 class="o_page_header mt8">Shipping Address </h2>
+                            <h2 class="o_page_header mt8">Datos personales</h2>
                           </t>
                           <t t-if="partner_id == website_sale_order.partner_shipping_id.id == website_sale_order.partner_invoice_id.id">
                             <div class="alert alert-warning" role="alert" t-if="not only_services">
-                              <h4 class="alert-heading">Be aware!</h4>
+                              <h4 class="alert-heading">¡Se consciente!</h4>
                               <p groups="sale.group_delivery_invoice_address">
-                                                        You are editing your <b>billing and shipping</b> addresses at the same time!<br/>
-                                                        If you want to modify your shipping address, create a <a href="/shop/address">new address</a>.
+                                                        ¡Estás editando tu dirección de <b>facturación y envío</b> al mismo tiempo!<br/>
+                                                        Si deseas modificar tu dirección de envío, crea una <a href="/shop/address">nueva dirección</a>.
                                                     </p>
                             </div>
                           </t>
@@ -47,9 +47,6 @@
                           </t>
                           <form action="/shop/address" method="post" class="checkout_autoformat">
                             <div class="form-row">
-                              <div class="col-lg-12">
-                                <h3><b>Datos personales</b></h3>
-                              </div>
                               <div t-attf-class="form-group #{error.get('name') and 'o_has_error' or ''} col-lg-12 div_name">
                                 <label class="col-form-label" for="name">*Nombre</label>
                                 <input type="text" name="name" t-attf-class="form-control #{error.get('name') and 'is-invalid' or ''}" t-att-value="'name' in checkout and checkout['name']"/>
