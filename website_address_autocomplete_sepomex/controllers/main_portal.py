@@ -29,14 +29,26 @@ class CustomerPortal(CP):
 
 
 class WebsiteSale(WS):
+
+    def checkout_check_address(self, order):
+        billing_fields_required = self._get_mandatory_fields_billing(order.partner_id.country_id.id)
+        billing_fields_required.remove('lastname')
+        if not all(order.partner_id.read(billing_fields_required)[0].values()):
+            return request.redirect('/shop/address?partner_id=%d' % order.partner_id.id)
+
+        shipping_fields_required = self._get_mandatory_fields_shipping(order.partner_shipping_id.country_id.id)
+        shipping_fields_required.remove('lastname')
+        if not all(order.partner_shipping_id.read(shipping_fields_required)[0].values()):
+            return request.redirect('/shop/address?partner_id=%d' % order.partner_shipping_id.id)
+
     def _get_mandatory_fields_billing(self, country_id=False):
         req = super(WebsiteSale, self)._get_mandatory_fields_billing()
-        req.extend(('street_number', 'city_id'))
+        req.extend(('street_number', 'lastname', 'city_id'))
         return req
 
     def _get_mandatory_fields_shipping(self, country_id=False):
         req = super(WebsiteSale, self)._get_mandatory_fields_shipping()
-        req.extend(('email', 'street_number', 'city_id'))
+        req.extend(('email', 'lastname', 'street_number', 'city_id'))
         return req
 
     @http.route(['/shop/address'], type='http', methods=['GET', 'POST'], auth="public", website=True, sitemap=False)

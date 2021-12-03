@@ -5,4 +5,3 @@
 from . import main
 from . import portal
 from . import main_portal
-from . import controllers
