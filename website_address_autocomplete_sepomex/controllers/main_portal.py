@@ -36,7 +36,7 @@ class WebsiteSale(WS):
 
     def _get_mandatory_fields_shipping(self, country_id=False):
         req = super(WebsiteSale, self)._get_mandatory_fields_shipping()
-        req.extend(('lastname', 'email', 'street_number', 'street_name', 'city_id'))
+        req.extend(('email', 'street_number', 'street_name', 'city_id'))
         return req
 
     @http.route(['/shop/address'], type='http', methods=['GET', 'POST'], auth="public", website=True, sitemap=False)
