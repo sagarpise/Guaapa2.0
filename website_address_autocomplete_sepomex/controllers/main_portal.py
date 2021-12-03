@@ -132,12 +132,10 @@ class WebsiteSale(WS):
         # Required fields from mandatory field function
         country_id = int(data.get('country_id', False))
         required_fields += mode[1] == 'shipping' and self._get_mandatory_fields_shipping(country_id) or self._get_mandatory_fields_billing(country_id)
-        default = 'Unknown'
-        if all_form_values.get('city_id', default) != 'Unknown':
-            del required_fields[3]
+        if all_form_values.get('city_id', 'Unknown') != 'Unknown':
+            required_fields.remove('city')
         else:
             all_form_values["city_id"] = False
-
         # error messagfor empty required fields
         for field_name in required_fields:
             if not data.get(field_name):
