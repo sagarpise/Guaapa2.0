@@ -13,7 +13,6 @@
     "depends": ['website_sale', 
     ],
     "data": [
-        #'views/assets.xml',
         'views/templates.xml',
         'views/my_details.xml',
         'views/checkout_total.xml',
@@ -23,8 +22,8 @@
         'web.assets_frontend' : [ 
             "/website_address_autocomplete_sepomex/static/src/js/form.js", 
             "/website_address_autocomplete_sepomex/static/src/js/portal_shop.js",
-            #"/website_address_autocomplete_sepomex/static/src/js/portal.js", 
             "/website_address_autocomplete_sepomex/static/src/css/style.css",
+            "/website_address_autocomplete_sepomex/static/src/js/validate.js",
         ],
     },
     'maintainers': [
