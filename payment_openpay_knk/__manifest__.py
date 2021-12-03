@@ -25,13 +25,13 @@
     'license': 'OPL-1',
     'depends': ['payment', 'website_sale'],
     'data': [
-        #'views/assets.xml',
+        # 'views/assets.xml',
         'views/payment_views.xml',
         'views/payment_templates.xml',
         'data/payment_icons_data.xml',
         'data/payment_acquirer_data.xml',
         'data/cron_data.xml',
-        #'views/payment_portal_templates.xml'
+        # 'views/payment_portal_templates.xml'
     ],
     'images': ['static/description/banner.jpg'],
     'installable': True,

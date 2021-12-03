@@ -24,17 +24,21 @@ class PaymentTransaction(models.Model):
 
     openpay_store_barcode_url = fields.Char('Store Barcode URL')
     openpay_store_reference = fields.Char('Store Reference')
-    openpay_store_receipt_filename = fields.Char(compute='compute_openpay_store_receipt_filename', string='Store Receipt Filename')
+    openpay_store_receipt_filename = fields.Char(
+        compute='compute_openpay_store_receipt_filename', string='Store Receipt Filename')
     openpay_store_receipt = fields.Binary('Store Receipt', attachment=True)
-    openpay_store_receipt_download_url = fields.Char('Store Receipt Download URL')
+    openpay_store_receipt_download_url = fields.Char(
+        'Store Receipt Download URL')
 
     openpay_bank = fields.Char('Bank')
     openpay_bank_name = fields.Char('Bank Name')
     openpay_bank_agreement = fields.Char('Bank Agreement')
     openpay_bank_clabe = fields.Char('Bank Clabe')
-    openpay_bank_receipt_filename = fields.Char(compute='compute_openpay_bank_receipt_filename', string='Bank Receipt Filename')
+    openpay_bank_receipt_filename = fields.Char(
+        compute='compute_openpay_bank_receipt_filename', string='Bank Receipt Filename')
     openpay_bank_receipt = fields.Binary('Bank Receipt', attachment=True)
-    openpay_bank_receipt_download_url = fields.Char('Bank Receipt Download URL')
+    openpay_bank_receipt_download_url = fields.Char(
+        'Bank Receipt Download URL')
 
     @api.depends('openpay_store_reference')
     def compute_openpay_store_receipt_filename(self):
@@ -54,12 +58,15 @@ class PaymentTransaction(models.Model):
     def _openpay_card_form_get_tx_from_data(self, data):
         reference = data.get('order_id')
         if not reference:
-            error_msg = 'Openpay(Card): received data with missing order reference (%s)' % (reference)
+            error_msg = 'Openpay(Card): received data with missing order reference (%s)' % (
+                reference)
             _logger.error(error_msg)
             raise ValidationError(error_msg)
-        tx = self.env['payment.transaction'].search([('reference', '=', reference)])
+        tx = self.env['payment.transaction'].search(
+            [('reference', '=', reference)])
         if not tx or len(tx) > 1:
-            error_msg = 'Openpay(Card): received data for reference %s' % (reference)
+            error_msg = 'Openpay(Card): received data for reference %s' % (
+                reference)
             if not tx:
                 error_msg += ': no order found'
             else:
@@ -72,12 +79,15 @@ class PaymentTransaction(models.Model):
     def _openpay_store_form_get_tx_from_data(self, data):
         reference = data.get('order_id')
         if not reference:
-            error_msg = 'Openpay(Store): received data with missing order reference (%s)' % (reference)
+            error_msg = 'Openpay(Store): received data with missing order reference (%s)' % (
+                reference)
             _logger.error(error_msg)
             raise ValidationError(error_msg)
-        tx = self.env['payment.transaction'].search([('reference', '=', reference)])
+        tx = self.env['payment.transaction'].search(
+            [('reference', '=', reference)])
         if not tx or len(tx) > 1:
-            error_msg = 'Openpay(Store): received data for reference %s' % (reference)
+            error_msg = 'Openpay(Store): received data for reference %s' % (
+                reference)
             if not tx:
                 error_msg += ': no order found'
             else:
@@ -90,12 +100,15 @@ class PaymentTransaction(models.Model):
     def _openpay_bank_form_get_tx_from_data(self, data):
         reference = data.get('order_id')
         if not reference:
-            error_msg = 'Openpay(Bank): received data with missing order reference (%s)' % (reference)
+            error_msg = 'Openpay(Bank): received data with missing order reference (%s)' % (
+                reference)
             _logger.error(error_msg)
             raise ValidationError(error_msg)
-        tx = self.env['payment.transaction'].search([('reference', '=', reference)])
+        tx = self.env['payment.transaction'].search(
+            [('reference', '=', reference)])
         if not tx or len(tx) > 1:
-            error_msg = 'Openpay(Bank): received data for reference %s' % (reference)
+            error_msg = 'Openpay(Bank): received data for reference %s' % (
+                reference)
             if not tx:
                 error_msg += ': no order found'
             else:
@@ -108,12 +121,15 @@ class PaymentTransaction(models.Model):
     def _openpay_alipay_form_get_tx_from_data(self, data):
         reference = data.get('order_id')
         if not reference:
-            error_msg = 'Openpay(Alipay): received data with missing order reference (%s)' % (reference)
+            error_msg = 'Openpay(Alipay): received data with missing order reference (%s)' % (
+                reference)
             _logger.error(error_msg)
             raise ValidationError(error_msg)
-        tx = self.env['payment.transaction'].search([('reference', '=', reference)])
+        tx = self.env['payment.transaction'].search(
+            [('reference', '=', reference)])
         if not tx or len(tx) > 1:
-            error_msg = 'Openpay(Alipay): received data for reference %s' % (reference)
+            error_msg = 'Openpay(Alipay): received data for reference %s' % (
+                reference)
             if not tx:
                 error_msg += ': no order found'
             else:
@@ -126,40 +142,48 @@ class PaymentTransaction(models.Model):
         invalid_parameters = []
         # Check Amount
         if float_compare(float(data.get('amount', '0.0')), (self.amount), 2) != 0:
-            invalid_parameters.append(('amount', data.get('amount'), '%.2f' % (self.amount)))
+            invalid_parameters.append(
+                ('amount', data.get('amount'), '%.2f' % (self.amount)))
         # Check Currency
         if data.get('currency') != self.currency_id.name:
-            invalid_parameters.append(('currency', data.get('currency'), self.currency_id.name))
+            invalid_parameters.append(
+                ('currency', data.get('currency'), self.currency_id.name))
         return invalid_parameters
 
     def _openpay_store_form_get_invalid_parameters(self, data):
         invalid_parameters = []
         # Check Amount
         if float_compare(float(data.get('amount', '0.0')), (self.amount), 2) != 0:
-            invalid_parameters.append(('amount', data.get('amount'), '%.2f' % (self.amount)))
+            invalid_parameters.append(
+                ('amount', data.get('amount'), '%.2f' % (self.amount)))
         # Check Currency
         if data.get('currency') != self.currency_id.name:
-            invalid_parameters.append(('currency', data.get('currency'), self.currency_id.name))
+            invalid_parameters.append(
+                ('currency', data.get('currency'), self.currency_id.name))
         return invalid_parameters
 
     def _openpay_bank_form_get_invalid_parameters(self, data):
         invalid_parameters = []
         # Check Amount
         if float_compare(float(data.get('amount', '0.0')), (self.amount), 2) != 0:
-            invalid_parameters.append(('amount', data.get('amount'), '%.2f' % (self.amount)))
+            invalid_parameters.append(
+                ('amount', data.get('amount'), '%.2f' % (self.amount)))
         # Check Currency
         if data.get('currency') != self.currency_id.name:
-            invalid_parameters.append(('currency', data.get('currency'), self.currency_id.name))
+            invalid_parameters.append(
+                ('currency', data.get('currency'), self.currency_id.name))
         return invalid_parameters
 
     def _openpay_alipay_form_get_invalid_parameters(self, data):
         invalid_parameters = []
         # Check Amount
         if float_compare(float(data.get('amount', '0.0')), (self.amount), 2) != 0:
-            invalid_parameters.append(('amount', data.get('amount'), '%.2f' % (self.amount)))
+            invalid_parameters.append(
+                ('amount', data.get('amount'), '%.2f' % (self.amount)))
         # Check Currency
         if data.get('currency') != self.currency_id.name:
-            invalid_parameters.append(('currency', data.get('currency'), self.currency_id.name))
+            invalid_parameters.append(
+                ('currency', data.get('currency'), self.currency_id.name))
         return invalid_parameters
 
     def get_openpay_store_receipt(self, reference):
@@ -175,9 +199,11 @@ class PaymentTransaction(models.Model):
             else:
                 url = 'https://sandbox-dashboard.openpay.co/paynet-pdf/'
         if acquirer.openpay_version == 'mxn':
-            res = requests.get(url + '%s/%s' % (acquirer.openpay_mxn_merchant_id, reference))
+            res = requests.get(url + '%s/%s' %
+                               (acquirer.openpay_mxn_merchant_id, reference))
         else:
-            res = requests.get(url + '%s/%s' % (acquirer.openpay_mxn_merchant_id, reference))
+            res = requests.get(url + '%s/%s' %
+                               (acquirer.openpay_mxn_merchant_id, reference))
         if res.status_code == 200:
             pdf_data = base64.b64encode(res.content)
             return pdf_data
@@ -196,9 +222,11 @@ class PaymentTransaction(models.Model):
             else:
                 url = 'https://sandbox-dashboard.openpay.co/spei-pdf/'
         if acquirer.openpay_version == 'mxn':
-            res = requests.get(url + '%s/%s' % (acquirer.openpay_mxn_merchant_id, reference))
+            res = requests.get(url + '%s/%s' %
+                               (acquirer.openpay_mxn_merchant_id, reference))
         else:
-            res = requests.get(url + '%s/%s' % (acquirer.openpay_mxn_merchant_id, reference))
+            res = requests.get(url + '%s/%s' %
+                               (acquirer.openpay_mxn_merchant_id, reference))
         if res.status_code == 200:
             pdf_data = base64.b64encode(res.content)
             return pdf_data
@@ -218,19 +246,23 @@ class PaymentTransaction(models.Model):
         self.write(vals)
 
         if status == 'completed':
-            _logger.info('Openpay(Card) payment for tx %s: set as DONE' % (self.reference))
+            _logger.info(
+                'Openpay(Card) payment for tx %s: set as DONE' % (self.reference))
             self._set_transaction_done()
         elif status in ('charge_pending', 'in_progress'):
-            _logger.info('Openpay(Card) payment for tx %s: set as PENDING' % (self.reference))
+            _logger.info(
+                'Openpay(Card) payment for tx %s: set as PENDING' % (self.reference))
             self._set_transaction_pending()
         elif status == 'cancelled':
-            _logger.info('Openpay(Card) payment for tx %s: set as CANCELLED' % (self.reference))
+            _logger.info(
+                'Openpay(Card) payment for tx %s: set as CANCELLED' % (self.reference))
             self._set_transaction_cancel()
         else:
             if data.get('error_message'):
                 error = data.get('error_message')
             else:
-                error = 'Received unrecognized response for Openpay(Card) Payment %s, set as error' % (self.reference)
+                error = 'Received unrecognized response for Openpay(Card) Payment %s, set as error' % (
+                    self.reference)
             _logger.info(error)
             self.write({
                 'state_message': error
@@ -244,7 +276,8 @@ class PaymentTransaction(models.Model):
             'date': fields.Datetime.now(),
             'openpay_authorization_code': data.get('authorization') or False,
         }
-        payment_method = json.loads(data.get('payment_method').replace("'", '"')) if not isinstance(data.get('payment_method'), dict) else data.get('payment_method')
+        payment_method = json.loads(data.get('payment_method').replace("'", '"')) if not isinstance(
+            data.get('payment_method'), dict) else data.get('payment_method')
         vals.update({
             'openpay_store_receipt_download_url': self.acquirer_id.get_receipt_download_url() + '/' + payment_method.get('reference'),
             'openpay_store_barcode_url': payment_method.get('barcode_url'),
@@ -254,19 +287,23 @@ class PaymentTransaction(models.Model):
         self.write(vals)
 
         if status == 'completed':
-            _logger.info('Openpay(Store) payment for tx %s: set as DONE' % (self.reference))
+            _logger.info(
+                'Openpay(Store) payment for tx %s: set as DONE' % (self.reference))
             self._set_transaction_done()
         elif status in ('charge_pending', 'in_progress'):
-            _logger.info('Openpay(Store) payment for tx %s: set as PENDING' % (self.reference))
+            _logger.info(
+                'Openpay(Store) payment for tx %s: set as PENDING' % (self.reference))
             self._set_transaction_pending()
         elif status == 'cancelled':
-            _logger.info('Openpay(Store) payment for tx %s: set as CANCELLED' % (self.reference))
+            _logger.info(
+                'Openpay(Store) payment for tx %s: set as CANCELLED' % (self.reference))
             self._set_transaction_cancel()
         else:
             if data.get('error_message'):
                 error = data.get('error_message')
             else:
-                error = 'Received unrecognized response for Openpay(Store) Payment %s, set as error' % (self.reference)
+                error = 'Received unrecognized response for Openpay(Store) Payment %s, set as error' % (
+                    self.reference)
             _logger.info(error)
             self.write({
                 'state_message': error
@@ -280,7 +317,8 @@ class PaymentTransaction(models.Model):
             'date': fields.Datetime.now(),
             'openpay_authorization_code': data.get('authorization') or False,
         }
-        payment_method = json.loads(data.get('payment_method').replace("'", '"')) if not isinstance(data.get('payment_method'), dict) else data.get('payment_method')
+        payment_method = json.loads(data.get('payment_method').replace("'", '"')) if not isinstance(
+            data.get('payment_method'), dict) else data.get('payment_method')
         vals.update({
             'openpay_bank_receipt_download_url': self.acquirer_id.get_bank_receipt_download_url() + '/' + data.get('id'),
             'openpay_bank_agreement': payment_method.get('agreement'),
@@ -292,19 +330,23 @@ class PaymentTransaction(models.Model):
         self.write(vals)
 
         if status == 'completed':
-            _logger.info('Openpay payment for tx %s: set as DONE' % (self.reference))
+            _logger.info('Openpay payment for tx %s: set as DONE' %
+                         (self.reference))
             self._set_transaction_done()
         elif status in ('charge_pending', 'in_progress'):
-            _logger.info('Openpay payment for tx %s: set as PENDING' % (self.reference))
+            _logger.info('Openpay payment for tx %s: set as PENDING' %
+                         (self.reference))
             self._set_transaction_pending()
         elif status == 'cancelled':
-            _logger.info('Openpay payment for tx %s: set as CANCELLED' % (self.reference))
+            _logger.info('Openpay payment for tx %s: set as CANCELLED' %
+                         (self.reference))
             self._set_transaction_cancel()
         else:
             if data.get('error_message'):
                 error = data.get('error_message')
             else:
-                error = 'Received unrecognized response for Openpay Payment %s, set as error' % (self.reference)
+                error = 'Received unrecognized response for Openpay Payment %s, set as error' % (
+                    self.reference)
             _logger.info(error)
             self.write({
                 'state_message': error
@@ -321,19 +363,23 @@ class PaymentTransaction(models.Model):
         self.write(vals)
 
         if status == 'completed':
-            _logger.info('Openpay(Alipay) payment for tx %s: set as DONE' % (self.reference))
+            _logger.info(
+                'Openpay(Alipay) payment for tx %s: set as DONE' % (self.reference))
             self._set_transaction_done()
         elif status in ('charge_pending', 'in_progress'):
-            _logger.info('Openpay(Alipay) payment for tx %s: set as PENDING' % (self.reference))
+            _logger.info(
+                'Openpay(Alipay) payment for tx %s: set as PENDING' % (self.reference))
             self._set_transaction_pending()
         elif status == 'cancelled':
-            _logger.info('Openpay(Alipay) payment for tx %s: set as CANCELLED' % (self.reference))
+            _logger.info(
+                'Openpay(Alipay) payment for tx %s: set as CANCELLED' % (self.reference))
             self._set_transaction_cancel()
         else:
             if data.get('error_message'):
                 error = data.get('error_message')
             else:
-                error = 'Received unrecognized response for Openpay(Alipay) Payment %s, set as error' % (self.reference)
+                error = 'Received unrecognized response for Openpay(Alipay) Payment %s, set as error' % (
+                    self.reference)
             _logger.info(error)
             self.write({
                 'state_message': error
@@ -357,8 +403,10 @@ class PaymentTransaction(models.Model):
                 else:
                     url = 'https://sandbox-api.openpay.co/v1/'
             if tx.acquirer_id.openpay_version == 'mxn':
-                res = requests.get(url + '%s/charges/%s' % (tx.acquirer_id.openpay_mxn_merchant_id, tx.acquirer_reference), auth=(tx.acquirer_id.openpay_mxn_secret_key, ""))
+                res = requests.get(url + '%s/charges/%s' % (tx.acquirer_id.openpay_mxn_merchant_id,
+                                                            tx.acquirer_reference), auth=(tx.acquirer_id.openpay_mxn_secret_key, ""))
             else:
-                res = requests.get(url + '%s/charges/%s' % (tx.acquirer_id.openpay_cop_merchant_id, tx.acquirer_reference), auth=(tx.acquirer_id.openpay_cop_secret_key, ""))
+                res = requests.get(url + '%s/charges/%s' % (tx.acquirer_id.openpay_cop_merchant_id,
+                                                            tx.acquirer_reference), auth=(tx.acquirer_id.openpay_cop_secret_key, ""))
             response = res.json()
             tx.form_feedback(response, tx.acquirer_id.provider)
