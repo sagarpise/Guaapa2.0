@@ -161,9 +161,8 @@
                       <div class="col-lg-12">
                         <div class="checkbox">
                           <label>
-                            <input type="checkbox" id="shipping_use_same" class="mr8" name="use_same" value="1" checked="checked"/>
-Ship to the same address
-                            <span class="ship_to_other text-muted" style="display: none">&amp;nbsp;(<i>Your shipping address will be requested later) </i>
+                            <input type="checkbox" id="shipping_use_same" class="mr8" name="use_same" value="1" checked="checked"/>Enviar a la misma dirección
+                            <span class="ship_to_other text-muted" style="display: none">&amp;nbsp;(<i>Tu dirección de envío será solicitada más tarde.) </i>
                             </span>
                           </label>
                         </div>
