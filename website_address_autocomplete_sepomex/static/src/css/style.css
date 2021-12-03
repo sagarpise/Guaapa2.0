@@ -41,12 +41,3 @@ form label {
 .pall {
     pointer-events: all;
 }
-
-@media (max-width: 500px) {
-    .oe_cart .a-submit-loading {
-        width: 100% !important;
-    }
-    .o_portal_wrap .float-right.mb32 {
-        width: 100% !important;
-    }
-}
