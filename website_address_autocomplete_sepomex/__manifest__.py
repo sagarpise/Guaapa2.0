@@ -28,7 +28,8 @@
         ],
     },
     'maintainers': [
-        'luisangel-g'
+        'luisangel-g',
+        'gerardomr8',
     ],
     "installable": True
 }
