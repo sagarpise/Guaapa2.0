@@ -1,9 +1,17 @@
+.alert-danger-guaapa {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
+
 .text-danger-guaapa {
     color: #dc3545 !important;
 }
+
 .form-control.r2 {
     border: 1.5px solid #c6c6c6 !important
 }
+
 .form-control.r2 {
     border-radius: 5px !important;
 }
@@ -12,19 +20,18 @@ form label {
     font-weight: 100;
 }
 
-.pnone{
+.pnone {
     pointer-events: none;
 }
 
-.pall{
+.pall {
     pointer-events: all;
 }
-@media (max-width: 500px) {
 
+@media (max-width: 500px) {
     .oe_cart .a-submit-loading {
         width: 100% !important;
     }
-
     .o_portal_wrap .float-right.mb32 {
         width: 100% !important;
     }
