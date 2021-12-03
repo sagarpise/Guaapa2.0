@@ -31,12 +31,12 @@ class CustomerPortal(CP):
 class WebsiteSale(WS):
     def _get_mandatory_fields_billing(self, country_id=False):
         req = super(WebsiteSale, self)._get_mandatory_fields_billing()
-        req.extend(('street_number', 'street_name'))
+        req.extend(('street_number', 'city_id'))
         return req
 
     def _get_mandatory_fields_shipping(self, country_id=False):
         req = super(WebsiteSale, self)._get_mandatory_fields_shipping()
-        req.extend(('email', 'street_number', 'street_name', 'city_id'))
+        req.extend(('email', 'street_number', 'city_id'))
         return req
 
     @http.route(['/shop/address'], type='http', methods=['GET', 'POST'], auth="public", website=True, sitemap=False)
@@ -142,7 +142,6 @@ class WebsiteSale(WS):
         for field_name in required_fields:
             if not data.get(field_name):
                 error[field_name] = 'missing'
-
         # email validation
         if data.get('email') and not tools.single_email_re.match(data.get('email')):
             error["email"] = 'error'
