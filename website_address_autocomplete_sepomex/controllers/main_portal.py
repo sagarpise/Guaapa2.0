@@ -2,7 +2,6 @@
 # Copyright 2021 - QUADIT, SA DE CV(https://www.quadit.mx)
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
-from openerp.addons.website.controllers.main import Website
 from odoo.addons.portal.controllers.portal import CustomerPortal as CP
 from odoo.addons.website_sale.controllers.main import WebsiteSale as WS
 from odoo import http, tools, _
@@ -19,7 +18,7 @@ class CustomerPortal(CP):
         
         self.MANDATORY_BILLING_FIELDS.extend((
             'street_name',
-            'street_number'))
+            'street_number',))
         self.OPTIONAL_BILLING_FIELDS.extend((
             'street_number2',
             'l10n_mx_edi_colony',
@@ -29,20 +28,16 @@ class CustomerPortal(CP):
         super(CustomerPortal, self).__init__(**args)
 
 
-class WebsiteSale(WS):    
-    def _get_mandatory_billing_fields(self):
-        flds = super(WebsiteSale, self)._get_mandatory_billing_fields()
-        flds.extend(('street_number', 'street_name'))
-        if 'street' in flds:
-            flds.remove('street')
-        return flds
+class WebsiteSale(WS):
+    def _get_mandatory_fields_billing(self, country_id=False):
+        req = super(WebsiteSale, self)._get_mandatory_fields_billing()
+        req.extend(('street_number', 'street_name'))
+        return req
 
-    def _get_mandatory_shipping_fields(self):
-        flds = super(WebsiteSale, self)._get_mandatory_shipping_fields()
-        flds.extend(('street_number', 'street_name','city_id'))
-        if 'street' in flds:
-            flds.remove('street')
-        return flds
+    def _get_mandatory_fields_shipping(self, country_id=False):
+        req = super(WebsiteSale, self)._get_mandatory_fields_shipping()
+        req.extend(('lastname', 'email', 'street_number', 'street_name', 'city_id'))
+        return req
 
     @http.route(['/shop/address'], type='http', methods=['GET', 'POST'], auth="public", website=True, sitemap=False)
     def address(self, **kw):
@@ -134,27 +129,19 @@ class WebsiteSale(WS):
 
         # Required fields from form
         required_fields = [f for f in (all_form_values.get('field_required') or '').split(',') if f]
-
         # Required fields from mandatory field function
         country_id = int(data.get('country_id', False))
         required_fields += mode[1] == 'shipping' and self._get_mandatory_fields_shipping(country_id) or self._get_mandatory_fields_billing(country_id)
-        
-        _logger.info('all_form_values')
-        _logger.info(all_form_values)
         default = 'Unknown'
-        _logger.info(all_form_values.get('city_id', default))
         if all_form_values.get('city_id', default) != 'Unknown':
             del required_fields[3]
         else:
             all_form_values["city_id"] = False
-            
 
         # error messagfor empty required fields
         for field_name in required_fields:
             if not data.get(field_name):
                 error[field_name] = 'missing'
-                _logger.info("============ ERROR ===============")
-                _logger.info(error)
 
         # email validation
         if data.get('email') and not tools.single_email_re.match(data.get('email')):
