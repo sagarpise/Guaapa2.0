@@ -33,12 +33,12 @@
                   <t t-if="mode[1] == 'shipping'">
                     <h2 class="o_page_header mt8">Datos personales</h2>
                   </t>
-                  <t t-if="partner_id == website_sale_order.partner_shipping_id.id == website_sale_order.partner_invoice_id.id">
+                  <t t-if="mode == ('edit', 'billing') and partner_id == website_sale_order.partner_shipping_id.id == website_sale_order.partner_invoice_id.id">
                     <div class="alert alert-danger-guaapa" role="alert" t-if="not only_services">
                       <h4 class="alert-heading">Importante:</h4>
                       <p groups="sale.group_delivery_invoice_address">
                         ¡Estás editando tu dirección de <b>facturación y envío</b> al mismo tiempo!<br/>
-                        Si deseas modificar tu dirección de envío, crea una <a href="/shop/address">nueva dirección</a>.
+                        Si tú dirección de envío es diferente, crea una <a href="/shop/address">nueva dirección</a>.
                     </p>
                   </div>
                 </t>
