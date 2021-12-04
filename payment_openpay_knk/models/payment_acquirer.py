@@ -30,8 +30,7 @@ class PaymentAcquirer(models.Model):
         ('openpay_card', 'Openpay(Card)'), ('openpay_store', 'Openpay(Store)'),
         ('openpay_bank', 'Openpay(Bank)'), ('openpay_alipay', 'Openpay(Alipay)')],
         ondelete={'openpay_card': 'set default', 'openpay_store': 'set default', 'openpay_bank': 'set default', 'openpay_alipay': 'set default'})
-    openpay_version = fields.Selection(
-        [('mxn', 'México'), ('cop', 'Colombia')], 'Version', default='mxn', required_if_provider='openpay')
+    openpay_version = fields.Selection([('mxn', 'México'), ('cop', 'Colombia')], 'Version', default='mxn', required_if_provider='openpay')
     openpay_mxn_merchant_id = fields.Char(required_if_provider='openpay')
     openpay_mxn_secret_key = fields.Char(required_if_provider='openpay')
     openpay_mxn_public_key = fields.Char(required_if_provider='openpay')
@@ -40,8 +39,7 @@ class PaymentAcquirer(models.Model):
     openpay_cop_public_key = fields.Char(required_if_provider='openpay')
     openpay_webhook_username = fields.Char('Webhook Username', copy=False)
     openpay_webhook_password = fields.Char('Webhook Password', copy=False)
-    openpay_webhook_id = fields.Char(
-        'Webhook ID', copy=False, readonly=True, store=True)
+    openpay_webhook_id = fields.Char('Webhook ID', copy=False, readonly=True, store=True)
 
     def _get_feature_support(self):
         res = super(PaymentAcquirer, self)._get_feature_support()
@@ -121,11 +119,9 @@ class PaymentAcquirer(models.Model):
         if not values.get('partner_state'):
             raise UserError("State field is missing in address !")
         if self.provider == 'openpay_alipay':
-            return_url = urls.url_join(
-                base_url, OpenpayController._return_alipay_url)
+            return_url = urls.url_join(base_url, OpenpayController._return_alipay_url)
         else:
-            return_url = urls.url_join(
-                base_url, OpenpayController._return_card_url)
+            return_url = urls.url_join(base_url, OpenpayController._return_card_url)
         data = {
             "method": method,
             "amount": '%.2f' % values['amount'],
@@ -150,11 +146,9 @@ class PaymentAcquirer(models.Model):
             "redirect_url": return_url
         }
         if self.openpay_version == 'mxn':
-            res = requests.post(url + '%s/charges' % self.openpay_mxn_merchant_id,
-                                headers=headers, data=json.dumps(data), auth=(self.openpay_mxn_secret_key, ""))
+            res = requests.post(url + '%s/charges' % self.openpay_mxn_merchant_id, headers=headers, data=json.dumps(data), auth=(self.openpay_mxn_secret_key, ""))
         else:
-            res = requests.post(url + '%s/charges' % self.openpay_cop_merchant_id,
-                                headers=headers, data=json.dumps(data), auth=(self.openpay_cop_secret_key, ""))
+            res = requests.post(url + '%s/charges' % self.openpay_cop_merchant_id, headers=headers, data=json.dumps(data), auth=(self.openpay_cop_secret_key, ""))
         response = res.json()
         return response
 
@@ -176,11 +170,9 @@ class PaymentAcquirer(models.Model):
         if not values.get('partner_state'):
             raise UserError("State field is missing in address !")
         if self.provider == 'openpay_store':
-            webhook_url = urls.url_join(
-                base_url, OpenpayController._webhook_store_url)
+            webhook_url = urls.url_join(base_url, OpenpayController._webhook_store_url)
         else:
-            webhook_url = urls.url_join(
-                base_url, OpenpayController._webhook_bank_url)
+            webhook_url = urls.url_join(base_url, OpenpayController._webhook_bank_url)
         data = {
             "url": webhook_url,
             "user": uuid.uuid4().hex,
@@ -192,11 +184,9 @@ class PaymentAcquirer(models.Model):
         self.openpay_webhook_username = data.get('user')
         self.openpay_webhook_password = data.get('password')
         if self.openpay_version == 'mxn':
-            res = requests.post(url + '%s/webhooks' % self.openpay_mxn_merchant_id,
-                                headers=headers, data=json.dumps(data), auth=(self.openpay_mxn_secret_key, ""))
+            res = requests.post(url + '%s/webhooks' % self.openpay_mxn_merchant_id, headers=headers, data=json.dumps(data), auth=(self.openpay_mxn_secret_key, ""))
         else:
-            res = requests.post(url + '%s/webhooks' % self.openpay_cop_merchant_id,
-                                headers=headers, data=json.dumps(data), auth=(self.openpay_cop_secret_key, ""))
+            res = requests.post(url + '%s/webhooks' % self.openpay_cop_merchant_id, headers=headers, data=json.dumps(data), auth=(self.openpay_cop_secret_key, ""))
         response = res.json()
         return response
 
