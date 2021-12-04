@@ -186,7 +186,7 @@ odoo.define("website_address_autocomplete_sepomex.form", function (require) {
                                 
                                 if(!$('.div_error-zipcode').length) {
                                     $(`<div class="col-12 div_error-zipcode">
-                                        <h5 class="error-zipcode text-danger font-weight-bold">No encontramos información del código postal, por favor rellena manualmente<h5>
+                                        <h5 class="error-zipcode text-danger-guaapa font-weight-bold">No encontramos información del código postal, por favor rellena manualmente<h5>
                                     </row>`)
                                     .insertBefore('.div_zip');
                                 }

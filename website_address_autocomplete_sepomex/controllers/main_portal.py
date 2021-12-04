@@ -2,7 +2,6 @@
 # Copyright 2021 - QUADIT, SA DE CV(https://www.quadit.mx)
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
-from openerp.addons.website.controllers.main import Website
 from odoo.addons.portal.controllers.portal import CustomerPortal as CP
 from odoo.addons.website_sale.controllers.main import WebsiteSale as WS
 from odoo import http, tools, _
@@ -19,7 +18,7 @@ class CustomerPortal(CP):
         
         self.MANDATORY_BILLING_FIELDS.extend((
             'street_name',
-            'street_number'))
+            'street_number',))
         self.OPTIONAL_BILLING_FIELDS.extend((
             'street_number2',
             'l10n_mx_edi_colony',
@@ -29,20 +28,28 @@ class CustomerPortal(CP):
         super(CustomerPortal, self).__init__(**args)
 
 
-class WebsiteSale(WS):    
-    def _get_mandatory_billing_fields(self):
-        flds = super(WebsiteSale, self)._get_mandatory_billing_fields()
-        flds.extend(('street_number', 'street_name'))
-        if 'street' in flds:
-            flds.remove('street')
-        return flds
+class WebsiteSale(WS):
 
-    def _get_mandatory_shipping_fields(self):
-        flds = super(WebsiteSale, self)._get_mandatory_shipping_fields()
-        flds.extend(('street_number', 'street_name','city_id'))
-        if 'street' in flds:
-            flds.remove('street')
-        return flds
+    def checkout_check_address(self, order):
+        billing_fields_required = self._get_mandatory_fields_billing(order.partner_id.country_id.id)
+        billing_fields_required.remove('lastname')
+        if not all(order.partner_id.read(billing_fields_required)[0].values()):
+            return request.redirect('/shop/address?partner_id=%d' % order.partner_id.id)
+
+        shipping_fields_required = self._get_mandatory_fields_shipping(order.partner_shipping_id.country_id.id)
+        shipping_fields_required.remove('lastname')
+        if not all(order.partner_shipping_id.read(shipping_fields_required)[0].values()):
+            return request.redirect('/shop/address?partner_id=%d' % order.partner_shipping_id.id)
+
+    def _get_mandatory_fields_billing(self, country_id=False):
+        req = super(WebsiteSale, self)._get_mandatory_fields_billing()
+        req.extend(('street_number', 'lastname', 'zip', 'city_id'))
+        return req
+
+    def _get_mandatory_fields_shipping(self, country_id=False):
+        req = super(WebsiteSale, self)._get_mandatory_fields_shipping()
+        req.extend(('email', 'lastname', 'zip', 'street_number', 'city_id'))
+        return req
 
     @http.route(['/shop/address'], type='http', methods=['GET', 'POST'], auth="public", website=True, sitemap=False)
     def address(self, **kw):
@@ -131,31 +138,23 @@ class WebsiteSale(WS):
         # data: values after preprocess
         error = dict()
         error_message = []
-
+        all_form_values_name_split = all_form_values['name'].split(',')
+        all_form_values['name'] = all_form_values_name_split[0]
+        data_name_split = data['name'].split(',')
+        data['name'] = data_name_split[0]
         # Required fields from form
         required_fields = [f for f in (all_form_values.get('field_required') or '').split(',') if f]
-
         # Required fields from mandatory field function
         country_id = int(data.get('country_id', False))
         required_fields += mode[1] == 'shipping' and self._get_mandatory_fields_shipping(country_id) or self._get_mandatory_fields_billing(country_id)
-        
-        _logger.info('all_form_values')
-        _logger.info(all_form_values)
-        default = 'Unknown'
-        _logger.info(all_form_values.get('city_id', default))
-        if all_form_values.get('city_id', default) != 'Unknown':
-            del required_fields[3]
+        if all_form_values.get('city_id', 'Unknown') != 'Unknown':
+            required_fields.remove('city')
         else:
             all_form_values["city_id"] = False
-            
-
         # error messagfor empty required fields
         for field_name in required_fields:
             if not data.get(field_name):
                 error[field_name] = 'missing'
-                _logger.info("============ ERROR ===============")
-                _logger.info(error)
-
         # email validation
         if data.get('email') and not tools.single_email_re.match(data.get('email')):
             error["email"] = 'error'
