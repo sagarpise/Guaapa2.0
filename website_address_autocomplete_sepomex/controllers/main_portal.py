@@ -43,12 +43,12 @@ class WebsiteSale(WS):
 
     def _get_mandatory_fields_billing(self, country_id=False):
         req = super(WebsiteSale, self)._get_mandatory_fields_billing()
-        req.extend(('street_number', 'lastname', 'city_id'))
+        req.extend(('street_number', 'lastname', 'zip', 'city_id'))
         return req
 
     def _get_mandatory_fields_shipping(self, country_id=False):
         req = super(WebsiteSale, self)._get_mandatory_fields_shipping()
-        req.extend(('email', 'lastname', 'street_number', 'city_id'))
+        req.extend(('email', 'lastname', 'zip', 'street_number', 'city_id'))
         return req
 
     @http.route(['/shop/address'], type='http', methods=['GET', 'POST'], auth="public", website=True, sitemap=False)
@@ -138,7 +138,10 @@ class WebsiteSale(WS):
         # data: values after preprocess
         error = dict()
         error_message = []
-
+        all_form_values_name_split = all_form_values['name'].split(',')
+        all_form_values['name'] = all_form_values_name_split[0]
+        data_name_split = data['name'].split(',')
+        data['name'] = data_name_split[0]
         # Required fields from form
         required_fields = [f for f in (all_form_values.get('field_required') or '').split(',') if f]
         # Required fields from mandatory field function
