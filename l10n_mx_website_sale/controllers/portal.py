@@ -2,14 +2,19 @@
 # Copyright 2021 - QUADIT, SA DE CV(https://www.quadit.mx)
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
+import logging
+
 from odoo import http
 from odoo.http import request
 from odoo.http import content_disposition, Controller, request, route
 from odoo.addons.portal.controllers.portal import CustomerPortal
+from odoo.addons.website_sale.controllers.main import WebsiteSale
+
+_logger = logging.getLogger(__name__)
 
 class CustomerPortalCity(CustomerPortal):
     MANDATORY_BILLING_FIELDS = ["name", "phone", "email", "street", "city", "country_id"]
-    OPTIONAL_BILLING_FIELDS = ["zip", "state_id", "vat", "company_name", "city_id"]
+    OPTIONAL_BILLING_FIELDS = ["zip", "state_id", "vat", "company_name", "city_id", "changeInputs"]
 
     def _prepare_portal_layout_values(self):
         values = super(CustomerPortalCity, self)._prepare_portal_layout_values()
@@ -26,10 +31,11 @@ class CustomerPortalCity(CustomerPortal):
         website=True,
     )
     def country_infos(self, state, mode, **kw):
+        
         return dict(
             cities=[(st.id, st.name, st.zipcode or "") for st in state.get_website_sale_cities(mode=mode)],
         )
-
+    
     @route(['/my/account'], type='http', auth='user', website=True)
     def account(self, redirect=None, **post):
         values = self._prepare_portal_layout_values()    
@@ -41,9 +47,11 @@ class CustomerPortalCity(CustomerPortal):
 
         if post and request.httprequest.method == 'POST':
             post.update({'country_id': 156})
-            post.update({'state_id': int(post['state_id'])})
-            #only sepomex
-            post.update({'city_id': int(post['city_id'])})
+            if post['state_id']:
+                post.update({'state_id': int(post['state_id'])})
+            else:
+                post.update({'state_id': int(post['state_id'])})
+            #post.update({'city_id': int(post['city_id'])})
             print(post)
             error, error_message = self.details_form_validate(post)
 
@@ -82,3 +90,17 @@ class CustomerPortalCity(CustomerPortal):
         response.headers['X-Frame-Options'] = 'DENY'
         return response
 
+
+#class CustomerWebsite(WebsiteSale):
+#    
+#    @http.route(['/shop/country_infos/<model("res.country"):country>'], type='json', auth="public", methods=['POST'], website=True)
+#    def country_infos(self, country, mode, **kw):
+#        dic = dict(
+#            fields=country.get_address_fields(),
+#            states=[(485, 'Aguascalientes', 'AGU'), (486, 'Baja California', 'BCN'), (487, 'Baja California Sur', 'BCS'), (490, 'Campeche', 'CAM'), (488, 'Chihuahua', 'CHH'), (492, 'Chiapas', 'CHP'), (491, 'Coahuila', 'COA'), (489, 'Colima', 'COL'), (493, 'Ciudad de México', 'DIF'), (494, 'Durango', 'DUR'), (1388, 'EDOMEX', 'EDOMEX'), (495, 'Guerrero', 'GRO'), (496, 'Guanajuato', 'GUA'), (497, 'Hidalgo', 'HID'), (498, 'Jalisco', 'JAL'), (501, 'México', 'MEX'), (499, 'Michoacán', 'MIC'), (500, 'Morelos', 'MOR'), (502, 'Nayarit', 'NAY'), (503, 'Nuevo León', 'NLE'), (504, 'Oaxaca', 'OAX'), (505, 'Puebla', 'PUE'), (507, 'Querétaro', 'QUE'), (506, 'Quintana Roo', 'ROO'), (508, 'Sinaloa', 'SIN'), (509, 'San Luis Potosí', 'SLP'), (510, 'Sonora', 'SON'), (511, 'Tabasco', 'TAB'), (513, 'Tamaulipas', 'TAM'), (512, 'Tlaxcala', 'TLA'), (514, 'Veracruz', 'VER'), (515, 'Yucatán', 'YUC'), (516, 'Zacatecas', 'ZAC')],
+#            phone_code=country.phone_code,
+#            zip_required=country.zip_required,
+#            state_required=country.state_required,
+#        )
+#        _logger.info(dic)
+#        return dic
