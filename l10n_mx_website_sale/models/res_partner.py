@@ -21,6 +21,7 @@ class ResPartner(models.Model):
         store=True,
         readonly=False,
     )
+   
     references = fields.Text(string="References", required=False)
 
     @api.model
