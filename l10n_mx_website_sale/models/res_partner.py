@@ -22,7 +22,7 @@ class ResPartner(models.Model):
         readonly=False,
     )
    
-   # references = fields.Text(string="References", required=False)
+    references = fields.Text(string="References", required=False)
 
     @api.model
     def create(self, vals):
