@@ -45,7 +45,7 @@ class WebsiteSale(WS):
     def _get_mandatory_fields_billing(self, country_id=False):
         req = super(WebsiteSale, self)._get_mandatory_fields_billing()
         # req.extend(('street_number', 'lastname', 'zip', 'city_id'))
-        req.extend(('street_number', 'lastname', 'zip',))
+        req.extend(('firstname','street_number', 'lastname', 'zip',))
         return req
 
     def _get_mandatory_fields_shipping(self, country_id=False):
@@ -141,10 +141,11 @@ class WebsiteSale(WS):
         # data: values after preprocess
         error = dict()
         error_message = []
-        all_form_values_name_split = all_form_values['name'].split(',')
-        all_form_values['name'] = all_form_values_name_split[0]
-        data_name_split = data['name'].split(',')
-        data['name'] = data_name_split[0]
+        all_form_values_name_split = all_form_values['firstname'].split(',')
+        all_form_values['firstname'] = all_form_values_name_split[0]
+        data_name_split = data['firstname'].split(',')
+        data['firstname'] = data_name_split[0]
+
         # Required fields from form
         required_fields = [f for f in (all_form_values.get('field_required') or '').split(',') if f]
         # Required fields from mandatory field function
@@ -155,6 +156,9 @@ class WebsiteSale(WS):
         else:
             all_form_values["city_id"] = False
         # error messagfor empty required fields
+        # if all_form_values.get('name', 'Unknown') != 'Unknown':
+        #     required_fields.remove('name')
+
         for field_name in required_fields:
             if not data.get(field_name):
                 error[field_name] = 'missing'
@@ -234,6 +238,10 @@ class WebsiteSaleNewFields(WS):
         result.qcontext['company_name'] = request.website.sale_get_order().partner_id.company_name
         if kw.get('company_name') and kw.get('company_name') != '':
             request.website.sale_get_order().partner_id.company_name = kw.get('company_name')
+
+        result.qcontext['firstname']=request.website.sale_get_order().partner_id.firstname
+        if kw.get('firstname') and kw.get('firstname') != '':
+            request.website.sale_get_order().partner_id.firstname = kw.get('firstname')
 
         return result
 

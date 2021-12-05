@@ -20,7 +20,7 @@
                                     <h3><b>Datos personales</b></h3>
                                 </div>
                                 
-                                
+
                                 <div t-attf-class="form-group #{error.get('name') and 'o_has_error' or ''} col-xl-12">
                                     <label class="col-form-label" for="name">Nombre*</label>
                                     <input type="text" name="name" t-attf-class="form-control r2 #{error.get('name') and 'is-invalid-guaapa' or ''}" t-att-value="name or partner.name"/>

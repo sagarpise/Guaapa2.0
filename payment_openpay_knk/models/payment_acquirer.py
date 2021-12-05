@@ -11,6 +11,14 @@ from odoo import api, fields, models, _
 from odoo.exceptions import UserError
 from odoo.addons.payment_openpay_knk.controllers.main import OpenpayController
 
+class AccountPaymentMethod(models.Model):
+    _inherit = 'account.payment.method'
+
+    @api.model
+    def _get_payment_method_information(self):
+        res = super()._get_payment_method_information()
+        res['openpay_card'] = {'mode': 'unique', 'domain': [('type', '=', 'bank')]}
+        return res
 
 class PaymentAcquirer(models.Model):
     _inherit = 'payment.acquirer'

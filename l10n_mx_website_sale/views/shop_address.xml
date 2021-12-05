@@ -47,9 +47,9 @@
                 </t>
                 <form action="/shop/address" method="post" class="checkout_autoformat">
                   <div class="form-row">
-                    <div t-attf-class="form-group #{error.get('name') and 'o_has_error' or ''} col-lg-12 div_name">
-                      <label class="col-form-label" for="name">*Nombre</label>
-                      <input type="text" name="name" t-attf-class="form-control #{error.get('name') and 'is-invalid-guaapa' or ''}" t-att-value="'name' in checkout and checkout['name']"/>
+                    <div t-attf-class="form-group #{error.get('firstname') and 'o_has_error' or ''} col-lg-12 div_name">
+                      <label class="col-form-label" for="firstname">*Nombre</label>
+                      <input type="text" name="firstname" t-attf-class="form-control #{error.get('firstname') and 'is-invalid-guaapa' or ''}" t-att-value="'firstname' in checkout and checkout['firstname']"/>
                     </div>
 
                     <div class="w-100"/>

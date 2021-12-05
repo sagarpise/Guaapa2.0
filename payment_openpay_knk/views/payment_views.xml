@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="openpay_acquirer_form" model="ir.ui.view">
+    <record id="openpay_payment_acquirer_form" model="ir.ui.view">
         <field name="name">acquirer.form.openpay</field>
         <field name="model">payment.acquirer</field>
         <field name="inherit_id" ref="payment.payment_acquirer_form" />
@@ -31,7 +31,7 @@
             </xpath>
         </field>
     </record>
-    <record id="openpay_transaction_form" model="ir.ui.view">
+    <record id="openpay_payment_transaction_form" model="ir.ui.view">
         <field name="name">acquirer.transaction.form.openpay</field>
         <field name="model">payment.transaction</field>
         <field name="inherit_id" ref="payment.payment_transaction_form" />

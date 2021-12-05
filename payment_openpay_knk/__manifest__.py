@@ -34,14 +34,15 @@
         #'views/payment_portal_templates.xml'
     ],
     'images': ['static/description/banner.jpg'],
+    'assets': {
+        'web.assets_frontend': [
+            "/payment_openpay_knk/static/src/css/openpay.css", 
+            "/payment_openpay_knk/static/src/css/pago.css",
+        ],
+    },
     'installable': True,
     'currency': 'EUR',
     'price': 129,
+    #'post_init_hook': 'create_missing_journal_for_acquirers',
     'uninstall_hook': 'uninstall_hook',
-    'assets': {
-        'web.assets_frontend': [
-            'payment_openpay_knk/static/src/css/openpay.css',
-            'payment_openpay_knk/static/src/css/pago.css',
-        ],
-    },
 }
