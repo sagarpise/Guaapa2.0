@@ -9,8 +9,8 @@ _logger = logging.getLogger(__name__)
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-    # invoice_data = fields.Boolean(string="Do you want to invoice?", selection=[('si', 'Si'), ('no', 'No'), ], required=False, )
-    invoice_data = fields.Boolean(string="Do you want to invoice?", required=False, default=False)
+
+    invoice_data = fields.Boolean(string="Do you want to invoice?",required=False,default=False)
     firstname = fields.Char("First name", index=True)
     lastname = fields.Char("Last name", index=True)
     lastname2 = fields.Char("Second last name",)
@@ -21,6 +21,7 @@ class ResPartner(models.Model):
         store=True,
         readonly=False,
     )
+    references = fields.Text(string="References", required=False)
 
     @api.model
     def create(self, vals):

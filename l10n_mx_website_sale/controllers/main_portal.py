@@ -7,6 +7,7 @@ from odoo.addons.website_sale.controllers.main import WebsiteSale as WS
 from odoo import http, tools, _
 from odoo.http import request
 from werkzeug.exceptions import Forbidden
+from odoo.exceptions import AccessError, MissingError, ValidationError
 import json
 import logging
 

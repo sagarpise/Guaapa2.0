@@ -27,6 +27,7 @@
         'views/my_details.xml',
         'views/checkout_total.xml',
         'views/shop_address.xml',
+        'views/checkout_templates.xml',
         #"views/assets.xml",
     ],
     'assets': {

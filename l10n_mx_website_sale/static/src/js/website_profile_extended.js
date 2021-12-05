@@ -2,17 +2,15 @@
  odoo.define('l10n_mx_website_sale.profile_hide_fields', function (require) {
 
     "use strict";
-
-    function invoice_hide_fields (event) {
-        if ($(this).find(":selected").val() == 'si'){
-            $('#div_user_donde_trabaja').show();
-            $('#div_user_cant_horas_work').show();
+      function invoice_hide_fields (event) {
+        if (this.checked){
+            $('#div_vat').show();
+            $('#div_company_name').show();
         }else{
-            $('#div_user_donde_trabaja').hide();
-            $('#div_user_cant_horas_work').hide();
+            $('#div_vat').hide();
+            $('#div_company_name').hide();
         }
     }
-
-    $("#user_trabaja").on("change", invoice_hide_fields);
+    $("#ref-code-signup-checkbox").on("change", invoice_hide_fields);
 
 });
