@@ -206,7 +206,42 @@ class WebsiteSaleCity(WS):
 
         return error, error_message
 
-    
+class WebsiteSaleNewFields(WS):
+
+    @http.route(['/shop/address'], type='http', methods=['GET', 'POST'], auth="public", website=True, sitemap=False)
+    def address(self, **kw):
+        result = super(WebsiteSaleNewFields, self).address(**kw)
+
+
+        result.qcontext['references'] = request.website.sale_get_order().partner_id.references
+
+        if kw.get('references') and kw.get('references') != '':
+            result.qcontext['references'] = kw.get('references')
+            request.website.sale_get_order().partner_id.references = kw.get('references')
+
+
+        result.qcontext['invoice_data'] = request.website.sale_get_order().partner_id.invoice_data
+        if kw.get('invoice_data') and kw.get('invoice_data') != '':
+            result.qcontext['invoice_data'] = kw.get('invoice_data')
+            request.website.sale_get_order().partner_id.invoice_data = True
+
+
+        result.qcontext['vat'] = request.website.sale_get_order().partner_id.vat
+        if kw.get('vat') and kw.get('vat') != '':
+            request.website.sale_get_order().partner_id.vat = kw.get('vat')
+
+
+        result.qcontext['company_name'] = request.website.sale_get_order().partner_id.company_name
+        if kw.get('company_name') and kw.get('company_name') != '':
+            request.website.sale_get_order().partner_id.company_name = kw.get('company_name')
+
+        return result
+
+
+    def _get_mandatory_fields_billing(self, country_id=False):
+        req = super(WebsiteSaleNewFields, self)._get_mandatory_fields_billing()
+        req.extend(('references',))
+        return req
 
 #class change_route_cart_Website(Website):
 #    @http.route(['/shop/cart/update'], type='http', auth="public", methods=['POST'], website=True)
