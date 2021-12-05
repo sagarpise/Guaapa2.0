@@ -43,12 +43,14 @@ class WebsiteSale(WS):
 
     def _get_mandatory_fields_billing(self, country_id=False):
         req = super(WebsiteSale, self)._get_mandatory_fields_billing()
-        req.extend(('street_number', 'lastname', 'zip', 'city_id'))
+        # req.extend(('street_number', 'lastname', 'zip', 'city_id'))
+        req.extend(('street_number', 'lastname', 'zip',))
         return req
 
     def _get_mandatory_fields_shipping(self, country_id=False):
         req = super(WebsiteSale, self)._get_mandatory_fields_shipping()
-        req.extend(('email', 'lastname', 'zip', 'street_number', 'city_id'))
+        # req.extend(('email', 'lastname', 'zip', 'street_number', 'city_id'))
+        req.extend(('email', 'lastname', 'zip', 'street_number',))
         return req
 
     @http.route(['/shop/address'], type='http', methods=['GET', 'POST'], auth="public", website=True, sitemap=False)

@@ -35,6 +35,8 @@
             </data>
         </field>
     </record>
+
+
     <record id="view_partner_form_firstname" model="ir.ui.view">
         <field name="name">Add firstname and surnames</field>
         <field name="model">res.partner</field>

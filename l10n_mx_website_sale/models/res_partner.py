@@ -9,12 +9,11 @@ _logger = logging.getLogger(__name__)
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-    invoice_data = fields.Selection(string="Trabaja", selection=[('si', 'Si'), ('no', 'No'), ], required=False, )
+    # invoice_data = fields.Boolean(string="Do you want to invoice?", selection=[('si', 'Si'), ('no', 'No'), ], required=False, )
+    invoice_data = fields.Boolean(string="Do you want to invoice?", required=False, default=False)
     firstname = fields.Char("First name", index=True)
     lastname = fields.Char("Last name", index=True)
-    lastname2 = fields.Char(
-        "Second last name",
-    )
+    lastname2 = fields.Char("Second last name",)
     name = fields.Char(
         compute="_compute_name",
         inverse="_inverse_name_after_cleaning_whitespace",
@@ -90,7 +89,6 @@ class ResPartner(models.Model):
     @api.model
     def _get_computed_name(self, lastname, firstname, lastname2=None):
         """Compute the name combined with the second lastname too.
-
         We have 2 lastnames, so lastnames and firstname will be separated by a
         comma.
         """
