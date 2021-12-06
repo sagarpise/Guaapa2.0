@@ -53,7 +53,7 @@ class WebsiteSale(WS):
     def _get_mandatory_fields_shipping(self, country_id=False):
         req = super(WebsiteSale, self)._get_mandatory_fields_shipping()
         # req.extend(('email', 'lastname', 'zip', 'street_number', 'city_id'))
-        req.extend(('email', 'lastname', 'zip', 'street_number',))
+        req.extend(('email','firstname', 'lastname', 'zip', 'street_number',))
         return req
 
     @http.route(['/shop/address'], type='http', methods=['GET', 'POST'], auth="public", website=True, sitemap=False)
@@ -190,6 +190,9 @@ class WebsiteSaleCity(WS):
             order, mode, values, errors, error_msg
         )
         new_values["city_id"] = values.get("city_id")
+        new_values["firstname"] = values.get("firstname")
+        new_values["lastname"] = values.get("lastname")
+        new_values["lastname2"] = values.get("lastname2")
         if new_values["city_id"]:
             city = request.env["res.city"].browse(int(values.get("city_id")))
             if city:
@@ -241,6 +244,14 @@ class WebsiteSaleNewFields(WS):
         result.qcontext['firstname']=request.website.sale_get_order().partner_id.firstname
         if kw.get('firstname') and kw.get('firstname') != '':
             request.website.sale_get_order().partner_id.firstname = kw.get('firstname')
+        
+        result.qcontext['lastname']=request.website.sale_get_order().partner_id.lastname
+        if kw.get('lastname') and kw.get('lastname') != '':
+            request.website.sale_get_order().partner_id.lastname = kw.get('lastname')
+        
+        result.qcontext['lastname2']=request.website.sale_get_order().partner_id.lastname2
+        if kw.get('lastname2') and kw.get('lastname2') != '':
+            request.website.sale_get_order().partner_id.lastname2 = kw.get('lastname2')
 
         return result
 
