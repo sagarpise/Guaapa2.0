@@ -137,7 +137,7 @@ class PaymentAcquirer(models.Model):
             "amount": '%.2f' % values['amount'],
             "description": values['reference'],
             "order_id": values['reference'],
-            "currency": currency or '',
+            "currency": currency.name or '',
             "customer": {
                 "name": partner.firstname or '',
                 "last_name": partner.lastname or '',
