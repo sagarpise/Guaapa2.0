@@ -124,29 +124,31 @@ class PaymentAcquirer(models.Model):
         headers = {
             'content-type': 'application/json'
         }
-        if not values.get('partner_state'):
+        partner = self.env['res.partner'].search([('id','=',values['partner_id'])])
+        if not partner.state_id.name :
             raise UserError("State field is missing in address !")
         if self.provider == 'openpay_alipay':
             return_url = urls.url_join(base_url, OpenpayController._return_alipay_url)
         else:
             return_url = urls.url_join(base_url, OpenpayController._return_card_url)
+        currency = self.env['res.currency'].search([('id','=',values['currency_id'])])
         data = {
             "method": method,
             "amount": '%.2f' % values['amount'],
             "description": values['reference'],
             "order_id": values['reference'],
-            "currency": values['currency'] and values['currency'].name or '',
+            "currency": currency and currency.name or '',
             "customer": {
-                "name": values.get('partner_first_name') or values.get('partner_name'),
-                "last_name": values.get('partner_last_name') or values.get('partner_name'),
-                "email": values.get('partner_email'),
-                "phone_number": values.get('partner_phone'),
+                "name": partner.firstname or partner.name,
+                "last_name": partner.lastname or partner.name,
+                "email": partner.email,
+                "phone_number": partner.phone,
                 "address": {
-                    "city": values.get('partner_city'),
-                    "state": values.get('partner_state').name if values.get('partner_state') else '',
-                    "line1": values.get('partner_address'),
-                    "postal_code": values.get('partner_zip'),
-                    "country_code": values.get('partner_country') and (values.get('partner_country').code or values.get('partner_country').name) or ''
+                    "city": partner.city,
+                    "state": partner.state_id.name if partner.state_id else '',
+                    "line1": partner.street,
+                    "postal_code": partner.zip,
+                    "country_code": partner.country_id.code or partner.country_id.name or ''
                 }
             },
             "send_email": False,
