@@ -210,7 +210,7 @@ class WebsiteSaleCity(WS):
 
         return error, error_message
 
-class WebsiteSaleNewFields(WS):
+class WebsiteSaleNewFields(WS): 
 
     @http.route(['/shop/address'], type='http', methods=['GET', 'POST'], auth="public", website=True, sitemap=False)
     def address(self, **kw):
