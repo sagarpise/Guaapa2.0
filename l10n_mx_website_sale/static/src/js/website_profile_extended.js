@@ -12,5 +12,7 @@
         }
     }
     $("#ref-code-signup-checkbox").on("change", invoice_hide_fields);
-
+    $('input').keydown( function() {    
+        $(":focus").removeClass("is-invalid-guaapa");
+    });
 });

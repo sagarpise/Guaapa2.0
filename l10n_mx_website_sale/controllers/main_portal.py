@@ -34,11 +34,13 @@ class WebsiteSale(WS):
     def checkout_check_address(self, order):
         billing_fields_required = self._get_mandatory_fields_billing(order.partner_id.country_id.id)
         billing_fields_required.remove('lastname')
+        billing_fields_required.remove('name')
         if not all(order.partner_id.read(billing_fields_required)[0].values()):
             return request.redirect('/shop/address?partner_id=%d' % order.partner_id.id)
 
         shipping_fields_required = self._get_mandatory_fields_shipping(order.partner_shipping_id.country_id.id)
         shipping_fields_required.remove('lastname')
+        shipping_fields_required.remove('name')
         if not all(order.partner_shipping_id.read(shipping_fields_required)[0].values()):
             return request.redirect('/shop/address?partner_id=%d' % order.partner_shipping_id.id)
 
@@ -141,10 +143,7 @@ class WebsiteSale(WS):
         # data: values after preprocess
         error = dict()
         error_message = []
-        all_form_values_name_split = all_form_values['firstname'].split(',')
-        all_form_values['firstname'] = all_form_values_name_split[0]
-        data_name_split = data['firstname'].split(',')
-        data['firstname'] = data_name_split[0]
+        
 
         # Required fields from form
         required_fields = [f for f in (all_form_values.get('field_required') or '').split(',') if f]
@@ -156,8 +155,8 @@ class WebsiteSale(WS):
         else:
             all_form_values["city_id"] = False
         # error messagfor empty required fields
-        # if all_form_values.get('name', 'Unknown') != 'Unknown':
-        #     required_fields.remove('name')
+       
+        required_fields.remove('name')
 
         for field_name in required_fields:
             if not data.get(field_name):
@@ -248,7 +247,6 @@ class WebsiteSaleNewFields(WS):
 
     def _get_mandatory_fields_billing(self, country_id=False):
         req = super(WebsiteSaleNewFields, self)._get_mandatory_fields_billing()
-        req.extend(('references',))
         return req
 
 #class change_route_cart_Website(Website):
