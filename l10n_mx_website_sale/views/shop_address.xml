@@ -79,9 +79,9 @@
                       </h3>
                     </div>
 
-                    <div t-attf-class="form-group #{error.get('street') and 'o_has_error' or ''} col-lg-12 div_street">
-                      <label class="col-form-label" for="street">*Calle</label>
-                      <input type="text" name="street" t-attf-class="form-control #{error.get('street') and 'is-invalid-guaapa' or ''}" t-att-value="'street' in checkout and checkout['street']"/>
+                    <div t-attf-class="form-group #{error.get('street_name') and 'o_has_error' or ''} col-lg-12 div_street">
+                      <label class="col-form-label" for="street_name">*Calle</label>
+                      <input type="text" name="street_name" t-attf-class="form-control #{error.get('street_name') and 'is-invalid-guaapa' or ''}" t-att-value="'street_name' in checkout and checkout['street_name']"/>
                     </div>
                     <div t-attf-class="form-group #{error.get('street_number') and 'o_has_error' or ''} col-md-6 col-xs-6 div_street_number">
                       <label class="control-label" for="street_number">*Número Exterior</label>
