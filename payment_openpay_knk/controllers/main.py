@@ -39,7 +39,7 @@ class OpenpayController(http.Controller):
         _logger.info('Openpay(Card): got the transaction redirect response as %s', pprint.pformat(post))
         response = self.get_openpay_tx_data(post.get('id'), post.get('cus_id'), 'openpay_card')
         _logger.info('Openpay(Card): entering form_feedback with post data %s', pprint.pformat(response))
-        request.env['payment.transaction'].sudo().form_feedback(response, 'openpay_card')
+        request.env['payment.transaction'].sudo()._handle_feedback_data(response, 'openpay_card')
         return werkzeug.utils.redirect('/payment/process')
 
     @http.route(_return_alipay_url, type='http', auth='public', csrf=False, save_session=False)
