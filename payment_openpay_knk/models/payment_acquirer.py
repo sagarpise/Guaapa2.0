@@ -137,10 +137,10 @@ class PaymentAcquirer(models.Model):
             "amount": '%.2f' % values['amount'],
             "description": values['reference'],
             "order_id": values['reference'],
-            "currency": currency and currency.name or '',
+            "currency": currency or '',
             "customer": {
-                "name": partner.firstname or partner.name,
-                "last_name": partner.lastname or partner.name,
+                "name": partner.firstname or '',
+                "last_name": partner.lastname or '',
                 "email": partner.email,
                 "phone_number": partner.phone,
                 "address": {
@@ -148,7 +148,7 @@ class PaymentAcquirer(models.Model):
                     "state": partner.state_id.name if partner.state_id else '',
                     "line1": partner.street,
                     "postal_code": partner.zip,
-                    "country_code": partner.country_id.code or partner.country_id.name or ''
+                    "country_code": partner.country_id.code  or ''
                 }
             },
             "send_email": False,
