@@ -32,6 +32,7 @@
                         />
                     </group>
                 </xpath>
+                
             </data>
         </field>
     </record>
@@ -107,6 +108,9 @@
                         </group>
                     </div>
                 </xpath>
+                <field name='vat' position='before'>
+                    <field name='references' />
+                </field>
             </data>
         </field>
     </record>

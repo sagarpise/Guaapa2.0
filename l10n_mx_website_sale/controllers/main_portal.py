@@ -194,6 +194,7 @@ class WebsiteSaleCity(WS):
         new_values["firstname"] = values.get("firstname")
         new_values["lastname"] = values.get("lastname")
         new_values["lastname2"] = values.get("lastname2")
+        new_values["references"] = values.get("references")
         if new_values["city_id"]:
             city = request.env["res.city"].browse(int(values.get("city_id")))
             if city:
