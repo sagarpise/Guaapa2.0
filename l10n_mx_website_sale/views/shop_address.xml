@@ -162,8 +162,9 @@
                       <div class="row">
                         <div t-attf-class="form-group #{error.get('references') and 'o_has_error'} col-lg-12 div_references">
                             <label class="col-form-label" for="references">References</label>
-                            <textarea  name="references">
-                                  
+                            <textarea  name="references"
+                                  t-attf-class="form-control #{error.get('references') and 'is-invalid'}">
+                                
                             </textarea>
                         </div>
                       </div>
