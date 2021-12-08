@@ -6,6 +6,7 @@ import logging
 import requests
 import json
 
+from odoo.exceptions import UserError
 from odoo import api, fields, models
 from odoo.addons.payment.models.payment_acquirer import ValidationError
 from odoo.tools.float_utils import float_compare
@@ -35,6 +36,20 @@ class PaymentTransaction(models.Model):
     openpay_bank_receipt_filename = fields.Char(compute='compute_openpay_bank_receipt_filename', string='Bank Receipt Filename')
     openpay_bank_receipt = fields.Binary('Bank Receipt', attachment=True)
     openpay_bank_receipt_download_url = fields.Char('Bank Receipt Download URL')
+
+    def _get_specific_rendering_values(self, processing_values):
+        """ Override of payment to return Openpay_card-specific rendering values.
+        """
+        res = super()._get_specific_rendering_values(processing_values)
+        if self.provider != 'openpay_card':
+            return res
+
+        charge = self.acquirer_id.create_openpay_charge('card', processing_values)
+        if charge.get('error_code'):
+            raise UserError(_("%s" % charge.get('description')))
+        form_url = charge.get('payment_method').get('url')
+
+        return {'form_url': '/openpay/charge/redirect?url=' + form_url}
 
     @api.depends('openpay_store_reference')
     def compute_openpay_store_receipt_filename(self):

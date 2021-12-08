@@ -1,170 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <data noupdate="1">
-        <record id="payment_acquirer_openpay_card" model="payment.acquirer">
-            <field name="name">Openpay(Card)</field>
-            <field name="image_128" type="base64" file="payment_openpay_knk/static/description/icon.png" />
-            <field name="provider">openpay_card</field>
-            <field name="company_id" ref="base.main_company" />
-            <field name="module_id" ref="base.module_payment_openpay_knk"/>
-            <field name="state">test</field>
-            <field name="pre_msg">
-                <![CDATA[
-    <p>You will be redirected to the Openpay payment page after clicking on the payment button.</p>]]>
-            </field>
-            <field name="openpay_version">mxn</field>
-            <field name="openpay_mxn_merchant_id">dummy</field>
-            <field name="openpay_mxn_secret_key">dummy</field>
-            <field name="openpay_mxn_public_key">dummy</field>
-            <field name="openpay_cop_merchant_id">dummy</field>
-            <field name="openpay_cop_secret_key">dummy</field>
-            <field name="openpay_cop_public_key">dummy</field>
-            <field name="payment_icon_ids" eval='[(6, 0, [
-            ref("payment.payment_icon_cc_visa"),
-            ref("payment.payment_icon_cc_mastercard"),
-            ref("payment.payment_icon_cc_american_express"),
-            ref("payment_openpay_knk.payment_icon_cc_carnet")])]'/>
-            <field name="description" type="html">
-                <p>
-                    A payment gateway to accept online payments via credit/debit cards.
-                </p>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><i class="fa fa-check"/>Online Payment</li>
-                    <li class="list-inline-item"><i class="fa fa-check"/>Payment Status Tracking</li>
-                </ul>
-            </field>
-        </record>
-        <record id="payment_acquirer_openpay_store" model="payment.acquirer">
-            <field name="name">Openpay(Store)</field>
-            <field name="image_128" type="base64" file="payment_openpay_knk/static/description/icon.png" />
-            <field name="provider">openpay_store</field>
-            <field name="company_id" ref="base.main_company" />
-            <field name="module_id" ref="base.module_payment_openpay_knk"/>
-            <field name="state">test</field>
-            <field name="pre_msg">
-                <![CDATA[
-    <p>You will get the store barcode receipt to make a payment after clicking on the payment button.</p>]]>
-            </field>
-            <field name="openpay_version">mxn</field>
-            <field name="openpay_mxn_merchant_id">dummy</field>
-            <field name="openpay_mxn_secret_key">dummy</field>
-            <field name="openpay_mxn_public_key">dummy</field>
-            <field name="openpay_cop_merchant_id">dummy</field>
-            <field name="openpay_cop_secret_key">dummy</field>
-            <field name="openpay_cop_public_key">dummy</field>
-            <field name="payment_icon_ids" eval='[(6, 0, [
-                ref("payment_openpay_knk.payment_icon_paynet"),
-                ref("payment_openpay_knk.payment_icon_7Eleven"),
-                ref("payment_openpay_knk.payment_icon_Asturiano"),
-                ref("payment_openpay_knk.payment_icon_aTiendas"),
-                ref("payment_openpay_knk.payment_icon_benavides"),
-                ref("payment_openpay_knk.payment_icon_Bodega_Aurrera"),
-                ref("payment_openpay_knk.payment_icon_circlek"),
-                ref("payment_openpay_knk.payment_icon_extra"),
-                ref("payment_openpay_knk.payment_icon_DelAhorro"),
-                ref("payment_openpay_knk.payment_icon_gestoPago"),
-                ref("payment_openpay_knk.payment_icon_guadalajara"),
-                ref("payment_openpay_knk.payment_icon_Kiosko"),
-                ref("payment_openpay_knk.payment_icon_multiRecargas"),
-                ref("payment_openpay_knk.payment_icon_pagoRapido"),
-                ref("payment_openpay_knk.payment_icon_sams"),
-                ref("payment_openpay_knk.payment_icon_Superama"),
-                ref("payment_openpay_knk.payment_icon_waldos"),
-                ref("payment_openpay_knk.payment_icon_walmart"),
-                ref("payment_openpay_knk.payment_icon_walmart_express")
-            ])]'/>
-            <field name="description" type="html">
-                <p>
-                    A payment gateway to accept store payments via paynet.
-                </p>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><i class="fa fa-check"/>Store Payment</li>
-                    <li class="list-inline-item"><i class="fa fa-check"/>Payment Status Tracking</li>
-                </ul>
-            </field>
-        </record>
-        <record id="payment_acquirer_openpay_bank" model="payment.acquirer">
-            <field name="name">Openpay(Bank)</field>
-            <field name="image_128" type="base64" file="payment_openpay_knk/static/description/icon.png" />
-            <field name="provider">openpay_bank</field>
-            <field name="company_id" ref="base.main_company" />
-            <field name="module_id" ref="base.module_payment_openpay_knk"/>
-            <field name="state">test</field>
-            <field name="pre_msg">
-                <![CDATA[
-    <p>You will get the bank receipt to make a payment after clicking on the payment button.</p>]]>
-            </field>
-            <field name="openpay_version">mxn</field>
-            <field name="openpay_mxn_merchant_id">dummy</field>
-            <field name="openpay_mxn_secret_key">dummy</field>
-            <field name="openpay_mxn_public_key">dummy</field>
-            <field name="openpay_cop_merchant_id">dummy</field>
-            <field name="openpay_cop_secret_key">dummy</field>
-            <field name="openpay_cop_public_key">dummy</field>
-            <field name="payment_icon_ids" eval='[(6, 0, [
-                ref("payment_openpay_knk.payment_icon_abccapital"),
-                ref("payment_openpay_knk.payment_icon_afirme"),
-                ref("payment_openpay_knk.payment_icon_banbajio"),
-                ref("payment_openpay_knk.payment_icon_bancoAzteca"),
-                ref("payment_openpay_knk.payment_icon_bancoppel"),
-                ref("payment_openpay_knk.payment_icon_banjercito"),
-                ref("payment_openpay_knk.payment_icon_banorte"),
-                ref("payment_openpay_knk.payment_icon_banregio"),
-                ref("payment_openpay_knk.payment_icon_bansi"),
-                ref("payment_openpay_knk.payment_icon_base"),
-                ref("payment_openpay_knk.payment_icon_bbva"),
-                ref("payment_openpay_knk.payment_icon_bx"),
-                ref("payment_openpay_knk.payment_icon_cibanco"),
-                ref("payment_openpay_knk.payment_icon_citibanamex"),
-                ref("payment_openpay_knk.payment_icon_grupoFinancieroMifel"),
-                ref("payment_openpay_knk.payment_icon_inbursa"),
-                ref("payment_openpay_knk.payment_icon_invex"),
-                ref("payment_openpay_knk.payment_icon_jpmorgan"),
-                ref("payment_openpay_knk.payment_icon_monex"),
-                ref("payment_openpay_knk.payment_icon_mugf"),
-                ref("payment_openpay_knk.payment_icon_multiva"),
-                ref("payment_openpay_knk.payment_icon_santander"),
-                ref("payment_openpay_knk.payment_icon_scotiabank"),
-                ref("payment_openpay_knk.payment_icon_volkswagen")
-            ])]'/>
-            <field name="description" type="html">
-                <p>
-                    A payment gateway to accept bank payments.
-                </p>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><i class="fa fa-check"/>Bank Payment</li>
-                    <li class="list-inline-item"><i class="fa fa-check"/>Payment Status Tracking</li>
-                </ul>
-            </field>
-        </record>
-        <record id="payment_acquirer_openpay_alipay" model="payment.acquirer">
-            <field name="name">Openpay(Alipay)</field>
-            <field name="image_128" type="base64" file="payment_openpay_knk/static/description/icon.png" />
-            <field name="provider">openpay_alipay</field>
-            <field name="company_id" ref="base.main_company" />
-            <field name="module_id" ref="base.module_payment_openpay_knk"/>
-            <field name="state">test</field>
-            <field name="pre_msg">
-                <![CDATA[
-    <p>You will be redirected to the Alipay(QR) payment page after clicking on the payment button.</p>]]>
-            </field>
-            <field name="openpay_version">mxn</field>
-            <field name="openpay_mxn_merchant_id">dummy</field>
-            <field name="openpay_mxn_secret_key">dummy</field>
-            <field name="openpay_mxn_public_key">dummy</field>
-            <field name="openpay_cop_merchant_id">dummy</field>
-            <field name="openpay_cop_secret_key">dummy</field>
-            <field name="openpay_cop_public_key">dummy</field>
-            <field name="payment_icon_ids" eval='[(6, 0, [ref("payment_openpay_knk.payment_icon_alipay")])]'/>
-            <field name="description" type="html">
-                <p>
-                    A payment gateway to accept online payments via Alipay QR code scan.
-                </p>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><i class="fa fa-check"/>Alipay Payment</li>
-                    <li class="list-inline-item"><i class="fa fa-check"/>Payment Status Tracking</li>
-                </ul>
-            </field>
-        </record>
-    </data>
+<odoo noupdate="0">
+    <record id="payment_acquirer_openpay_card" model="payment.acquirer">
+        <field name="name">Openpay(Card)</field>
+        <field name="image_128" type="base64" file="payment_openpay_knk/static/description/icon.png" />
+        <field name="provider">openpay_card</field>
+        <field name="company_id" ref="base.main_company" />
+        <field name="redirect_form_view_id" ref="openpay_form"/>
+        <!-- <field name="view_template_id" ref="openpay_form" /> -->
+        <field name="module_id" ref="base.module_payment_openpay_knk"/>
+        <field name="state">test</field>
+        <field name="pre_msg">
+            <![CDATA[
+<p>You will be redirected to the Openpay payment page after clicking on the payment button.</p>]]>
+        </field>
+        <field name="openpay_version">mxn</field>
+        <field name="openpay_mxn_merchant_id">dummy</field>
+        <field name="openpay_mxn_secret_key">dummy</field>
+        <field name="openpay_mxn_public_key">dummy</field>
+        <field name="openpay_cop_merchant_id">dummy</field>
+        <field name="openpay_cop_secret_key">dummy</field>
+        <field name="openpay_cop_public_key">dummy</field>
+        <field name="payment_icon_ids" eval='[(6, 0, [
+        ref("payment.payment_icon_cc_visa"),
+        ref("payment.payment_icon_cc_mastercard"),
+        ref("payment.payment_icon_cc_american_express"),
+        ref("payment_openpay_knk.payment_icon_cc_carnet")])]'/>
+        <field name="description" type="html">
+            <p>
+                A payment gateway to accept online payments via credit/debit cards.
+            </p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><i class="fa fa-check"/>Online Payment</li>
+                <li class="list-inline-item"><i class="fa fa-check"/>Payment Status Tracking</li>
+            </ul>
+        </field>
+    </record>
+    <record id="payment_method_openpay" model="account.payment.method">
+        <field name="name">Openpay(Card)</field>
+        <field name="code">openpay_card</field>
+        <field name="payment_type">inbound</field>
+    </record>
 </odoo>

@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <template name="address_checkout" id="address_checkout" inherit_id="website_sale.address">
+            <xpath expr="//div[@class='w-100'][last()]" position="after">
+                
+                <div class="col-12">
+                    <div class="form-group form-check">
+                        <input type="checkbox"
+                               id="ref-code-signup-checkbox"
+                        />
+                        <label class="form-check-label" for="invoice_data">¿Quieres facturar?</label>
+                    </div>
+                </div>
+                <div id="div_company_name" t-attf-class="form-group #{error.get('company_name') and 'o_has_error' or ''} col-lg-6 div_company_name" style="display:none;">
+                    <label class="col-form-label" for="company_name">Nombre de la compañia</label>
+                    <input type="text" name="company_name"
+                           t-attf-class="form-control #{error.get('company_name') and 'is-invalid' or ''}"
+                           t-att-value="'company_name' in checkout and checkout['company_name']"/>
+                </div>
+                   <div id="div_vat" t-attf-class="form-group #{error.get('vat') and 'o_has_error' or ''} col-lg-6 div_vat" style="display:none;">
+                    <label class="col-form-label" for="vat">RFC</label>
+                    <input type="text" name="vat"
+                           t-attf-class="form-control #{error.get('vat') and 'is-invalid' or ''}"
+                           t-att-value="'vat' in checkout and checkout['vat']"/>
+                </div>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>
